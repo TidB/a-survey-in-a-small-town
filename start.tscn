@@ -1,0 +1,189 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://person.tscn" type="PackedScene" id=1]
+[ext_resource path="res://font/JosefinSans-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://start.gd" type="Script" id=3]
+[ext_resource path="res://bg_gradient.tres" type="Texture" id=4]
+[ext_resource path="res://font/Default.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Wobble.shader" type="Shader" id=6]
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 6 )
+shader_param/amount = 3.0
+shader_param/speed = 1.0
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 6 )
+shader_param/amount = 3.0
+shader_param/speed = 2.0
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = ExtResource( 6 )
+shader_param/amount = 6.0
+shader_param/speed = 2.0
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 6 )
+shader_param/amount = 10.0
+shader_param/speed = 1.5
+
+[sub_resource type="DynamicFont" id=10]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="Shader" id=11]
+code = "shader_type canvas_item;
+
+uniform sampler2D gradient;
+
+void fragment() {
+	COLOR = texture(gradient, vec2(round(UV.x * 6.0) / 6.0));
+}"
+
+[sub_resource type="ShaderMaterial" id=12]
+shader = SubResource( 11 )
+shader_param/gradient = ExtResource( 4 )
+
+[sub_resource type="Shader" id=13]
+code = "shader_type canvas_item;
+
+void fragment() {
+	COLOR = vec4(vec3(1, 1, 1) - texture(SCREEN_TEXTURE, SCREEN_UV).rgb, texture(TEXTURE, UV).a);
+}"
+
+[sub_resource type="ShaderMaterial" id=14]
+shader = SubResource( 13 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+start_time = 5
+
+[node name="Background" type="Polygon2D" parent="."]
+color = Color( 0.133333, 0.145098, 0.164706, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
+
+[node name="Town" type="Polygon2D" parent="."]
+position = Vector2( 960, 609 )
+scale = Vector2( 2, 2 )
+antialiased = true
+polygon = PoolVector2Array( -64, -104, -136, 47.5, -56, 127.5, 0, 71.5, 56, 127.5, 136, 47.5, 64, -104, 0, 48 )
+
+[node name="Rift" type="Node2D" parent="."]
+
+[node name="Small" type="Polygon2D" parent="Rift"]
+visible = false
+material = SubResource( 5 )
+position = Vector2( 960, 728 )
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 0.0151978, -23.0367, -5.2821, -35.4854, -16, -24, -8, -8, -16, 8, -8, 8, -16, 16, -8, 32, 0, 24, 8, 32, 16, 32, 8, 24, 16, 16, 8, 8, 16, 0, 8, -8, 16, -8, 8, -16, 7.16656, -39.9219 )
+
+[node name="SmallBase" type="Polygon2D" parent="Rift"]
+visible = false
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 953.094, 688.69, 960, 704, 967.179, 687.955, 968, 712, 960, 728, 968, 736, 968, 752, 976, 768, 960, 752, 952, 760, 952, 744, 960, 728, 952, 712 )
+
+[node name="Medium" type="Polygon2D" parent="Rift"]
+visible = false
+material = SubResource( 6 )
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 944, 664, 936, 672, 944, 688, 928, 704, 936, 712, 944, 712, 944, 736, 936, 744, 928, 768, 928, 776, 944, 768, 960, 752, 992, 784, 1016, 768, 1000, 760, 1008, 744, 992, 728, 1000, 712, 984, 704, 984, 688, 992, 672, 976, 664, 960, 704 )
+
+[node name="MediumBase" type="Polygon2D" parent="Rift"]
+visible = false
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 943.333, 665.335, 960, 704, 976.744, 665.026, 976, 696, 984, 760, 992, 784, 960, 752, 936, 776, 936, 776, 936, 768, 936, 768, 944, 752, 952, 736, 952, 696, 944, 680 )
+
+[node name="Large" type="Polygon2D" parent="Rift"]
+visible = false
+material = SubResource( 7 )
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 960, 704, 872, 496, 856, 528, 872, 576, 848, 584, 864, 600, 832, 608, 840, 632, 832, 648, 848, 664, 816, 688, 864, 712, 872, 728, 904, 752, 840, 768, 824, 792, 848, 808, 904, 808, 960, 752, 1024, 816, 1056, 800, 1072, 800, 1056, 784, 1080, 760, 1112, 736, 1056, 736, 1048, 712, 1080, 688, 1120, 688, 1112, 656, 1136, 640, 1096, 624, 1088, 608, 1064, 600, 1080, 576, 1064, 568, 1072, 544, 1056, 520, 1040, 512 )
+
+[node name="LargeBase" type="Polygon2D" parent="Rift"]
+visible = false
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( 872, 496, 888, 584, 888, 584, 936, 752, 904, 808, 960, 752, 1024, 816, 1024, 696, 1040, 608, 1040, 512, 960, 704 )
+
+[node name="Final" type="Polygon2D" parent="Rift"]
+visible = false
+material = SubResource( 8 )
+position = Vector2( 960, 609 )
+scale = Vector2( 2, 2 )
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -64, -104.5, -76, -88.5, -80.8212, -82.4735, -92, -68.5, -93.7195, -56.4637, -96, -40.5, -104, -24.5, -108, -24.5, -108, -12.5, -118.24, -10.7934, -132, -8.5, -134.179, 8.93154, -136, 23.5, -148, 27.5, -140, 35.5, -136, 48, -128, 71.5, -112, 79.5, -112, 99.5, -88, 99.5, -71.3057, 114.108, -56, 127.5, -27.5, 99, 0, 71.5, 30, 101.5, 56, 127.5, 72, 123.5, 80, 111.5, 90.3564, 111.5, 100, 111.5, 96, 95.5, 106.464, 85.0362, 116, 75.5, 128, 75.5, 128, 63.5, 136, 48, 128, 23.5, 128, 7.5, 112, -4.5, 120, -12.5, 108, -24.5, 96, -44.5, 98.146, -57.3763, 100, -68.5, 93.3587, -75.1414, 84.343, -84.157, 64, -104.5, 31.7459, -27.8965, 0, 47.5, -30.5506, -25.0576 )
+
+[node name="FinalBase" type="Polygon2D" parent="Rift"]
+visible = false
+position = Vector2( 960, 609 )
+scale = Vector2( 2, 2 )
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -64, -104.5, -136.076, 47.5728, -56, 127.5, 0, 71.5, 56, 127.5, 136.205, 47.4615, 64, -104.5, 0, 47.5 )
+
+[node name="People" type="Node" parent="."]
+
+[node name="Ralf" parent="People" instance=ExtResource( 1 )]
+position = Vector2( 832, 273 )
+
+[node name="Mary" parent="People" instance=ExtResource( 1 )]
+position = Vector2( 1088, 273 )
+person = 1
+
+[node name="Alison" parent="People" instance=ExtResource( 1 )]
+position = Vector2( 1346, 701 )
+person = 2
+
+[node name="Emily" parent="People" instance=ExtResource( 1 )]
+position = Vector2( 1072, 977 )
+person = 3
+
+[node name="Alex" parent="People" instance=ExtResource( 1 )]
+position = Vector2( 848, 977 )
+person = 4
+
+[node name="Nelly" parent="People" instance=ExtResource( 1 )]
+position = Vector2( 574, 701 )
+person = 5
+
+[node name="Timeline" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Timeline"]
+margin_left = 640.0
+margin_top = 80.0
+margin_right = 1280.0
+margin_bottom = 140.0
+custom_fonts/font = SubResource( 10 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slider" type="Polygon2D" parent="Timeline"]
+material = SubResource( 12 )
+position = Vector2( 0, -64 )
+texture = ExtResource( 4 )
+polygon = PoolVector2Array( 0, 64, 0, 128, 1920, 128, 1920, 64 )
+
+[node name="Indicator" type="Polygon2D" parent="Timeline"]
+antialiased = true
+polygon = PoolVector2Array( -8, 0, -8, 16, 0, 24, 8, 16, 8, 0 )
+
+[node name="Selection" type="Label" parent="."]
+material = SubResource( 14 )
+margin_left = 736.0
+margin_top = 704.0
+margin_right = 1184.0
+margin_bottom = 751.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://person.tscn" type="PackedScene" id=1]
+[ext_resource path="res://interview.gd" type="Script" id=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void fragment() {
+	//COLOR.rgb = vec3(floor(fract(SCREEN_UV.x * 10.0) + 0.1));
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="Polygon2D" parent="."]
+material = SubResource( 2 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
+
+[node name="person" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1600, 320 )
+scale = Vector2( 4, 4 )
+
+[node name="PersonSpeech" type="Polygon2D" parent="."]
+position = Vector2( 128, 32 )
+antialiased = true
+polygon = PoolVector2Array( 128, 64, 128, 512, 1024, 512, 1024, 320, 1088, 288, 1024, 256, 1024, 64 )
+
+[node name="PlayerSpeech" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( 256, 704, 256, 1024, 1152, 1024, 1152, 704 )
