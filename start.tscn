@@ -20,7 +20,7 @@ shader_param/speed = 2.0
 [sub_resource type="ShaderMaterial" id=7]
 shader = ExtResource( 6 )
 shader_param/amount = 6.0
-shader_param/speed = 2.0
+shader_param/speed = 1.5
 
 [sub_resource type="ShaderMaterial" id=8]
 shader = ExtResource( 6 )
@@ -59,14 +59,7 @@ script = ExtResource( 3 )
 start_time = 5
 
 [node name="Background" type="Polygon2D" parent="."]
-color = Color( 0.133333, 0.145098, 0.164706, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
-
-[node name="Town" type="Polygon2D" parent="."]
-position = Vector2( 960, 609 )
-scale = Vector2( 2, 2 )
-antialiased = true
-polygon = PoolVector2Array( -64, -104, -136, 47.5, -56, 127.5, 0, 71.5, 56, 127.5, 136, 47.5, 64, -104, 0, 48 )
 
 [node name="Rift" type="Node2D" parent="."]
 
@@ -76,45 +69,28 @@ material = SubResource( 5 )
 position = Vector2( 960, 728 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
-polygon = PoolVector2Array( 0.0151978, -23.0367, -5.2821, -35.4854, -16, -24, -8, -8, -16, 8, -8, 8, -16, 16, -8, 32, 0, 24, 8, 32, 16, 32, 8, 24, 16, 16, 8, 8, 16, 0, 8, -8, 16, -8, 8, -16, 7.16656, -39.9219 )
-
-[node name="SmallBase" type="Polygon2D" parent="Rift"]
-visible = false
-color = Color( 0, 0, 0, 1 )
-antialiased = true
-polygon = PoolVector2Array( 953.094, 688.69, 960, 704, 967.179, 687.955, 968, 712, 960, 728, 968, 736, 968, 752, 976, 768, 960, 752, 952, 760, 952, 744, 960, 728, 952, 712 )
+polygon = PoolVector2Array( 0, -32, 0, -48, -16, -24, -8, -8, -16, 8, -8, 8, -16, 16, -8, 40, 0, 32, 8, 40, 16, 32, 8, 24, 16, 16, 8, 8, 16, 0, 8, -8, 16, -8, 8, -16, 0, -48 )
 
 [node name="Medium" type="Polygon2D" parent="Rift"]
 visible = false
 material = SubResource( 6 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
-polygon = PoolVector2Array( 944, 664, 936, 672, 944, 688, 928, 704, 936, 712, 944, 712, 944, 736, 936, 744, 928, 768, 928, 776, 944, 768, 960, 752, 992, 784, 1016, 768, 1000, 760, 1008, 744, 992, 728, 1000, 712, 984, 704, 984, 688, 992, 672, 976, 664, 960, 704 )
-
-[node name="MediumBase" type="Polygon2D" parent="Rift"]
-visible = false
-color = Color( 0, 0, 0, 1 )
-antialiased = true
-polygon = PoolVector2Array( 943.333, 665.335, 960, 704, 976.744, 665.026, 976, 696, 984, 760, 992, 784, 960, 752, 936, 776, 936, 776, 936, 768, 936, 768, 944, 752, 952, 736, 952, 696, 944, 680 )
+polygon = PoolVector2Array( 944, 656, 936, 672, 944, 688, 928, 704, 936, 712, 944, 712, 944, 736, 936, 744, 928, 768, 928, 776, 944, 776, 960, 760, 992, 792, 1016, 768, 1000, 760, 1008, 744, 992, 728, 1000, 712, 984, 704, 984, 688, 992, 672, 976, 656, 960, 696 )
 
 [node name="Large" type="Polygon2D" parent="Rift"]
 visible = false
 material = SubResource( 7 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
-polygon = PoolVector2Array( 960, 704, 872, 496, 856, 528, 872, 576, 848, 584, 864, 600, 832, 608, 840, 632, 832, 648, 848, 664, 816, 688, 864, 712, 872, 728, 904, 752, 840, 768, 824, 792, 848, 808, 904, 808, 960, 752, 1024, 816, 1056, 800, 1072, 800, 1056, 784, 1080, 760, 1112, 736, 1056, 736, 1048, 712, 1080, 688, 1120, 688, 1112, 656, 1136, 640, 1096, 624, 1088, 608, 1064, 600, 1080, 576, 1064, 568, 1072, 544, 1056, 520, 1040, 512 )
-
-[node name="LargeBase" type="Polygon2D" parent="Rift"]
-visible = false
-color = Color( 0, 0, 0, 1 )
-antialiased = true
-polygon = PoolVector2Array( 872, 496, 888, 584, 888, 584, 936, 752, 904, 808, 960, 752, 1024, 816, 1024, 696, 1040, 608, 1040, 512, 960, 704 )
+polygon = PoolVector2Array( 960, 680, 888, 488, 856, 528, 872, 576, 848, 584, 864, 600, 832, 608, 840, 632, 832, 648, 848, 664, 816, 688, 864, 712, 872, 728, 904, 752, 840, 768, 824, 792, 848, 808, 912, 824, 960, 768, 1016, 832, 1056, 800, 1072, 800, 1056, 784, 1080, 760, 1112, 736, 1056, 736, 1048, 712, 1080, 688, 1120, 688, 1112, 656, 1136, 640, 1096, 624, 1088, 608, 1064, 600, 1080, 576, 1064, 568, 1072, 544, 1056, 520, 1032, 504 )
 
 [node name="Final" type="Polygon2D" parent="Rift"]
 visible = false
 material = SubResource( 8 )
 position = Vector2( 960, 609 )
 scale = Vector2( 2, 2 )
+z_index = 1
 color = Color( 0, 0, 0, 1 )
 antialiased = true
 polygon = PoolVector2Array( -64, -104.5, -76, -88.5, -80.8212, -82.4735, -92, -68.5, -93.7195, -56.4637, -96, -40.5, -104, -24.5, -108, -24.5, -108, -12.5, -118.24, -10.7934, -132, -8.5, -134.179, 8.93154, -136, 23.5, -148, 27.5, -140, 35.5, -136, 48, -128, 71.5, -112, 79.5, -112, 99.5, -88, 99.5, -71.3057, 114.108, -56, 127.5, -27.5, 99, 0, 71.5, 30, 101.5, 56, 127.5, 72, 123.5, 80, 111.5, 90.3564, 111.5, 100, 111.5, 96, 95.5, 106.464, 85.0362, 116, 75.5, 128, 75.5, 128, 63.5, 136, 48, 128, 23.5, 128, 7.5, 112, -4.5, 120, -12.5, 108, -24.5, 96, -44.5, 98.146, -57.3763, 100, -68.5, 93.3587, -75.1414, 84.343, -84.157, 64, -104.5, 31.7459, -27.8965, 0, 47.5, -30.5506, -25.0576 )
@@ -126,6 +102,11 @@ scale = Vector2( 2, 2 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
 polygon = PoolVector2Array( -64, -104.5, -136.076, 47.5728, -56, 127.5, 0, 71.5, 56, 127.5, 136.205, 47.4615, 64, -104.5, 0, 47.5 )
+
+[node name="TownCutout" type="Polygon2D" parent="."]
+color = Color( 0.133333, 0.145098, 0.164706, 1 )
+antialiased = true
+polygon = PoolVector2Array( 0, 0, 0, 1080, 848, 1080, 848, 864, 688, 704, 832, 400, 960, 704, 1088, 400, 1232, 704, 1072, 864, 960, 752, 848, 864, 848, 1080, 1920, 1080, 1920, 0 )
 
 [node name="People" type="Node" parent="."]
 

@@ -25,19 +25,19 @@ const TIME_CONFIG = [
 		'offset': 0,
 		'name': 'Today',
 		'avail': [Global.Person.Alex, Global.Person.Emily, Global.Person.Nelly],
-		'rift': ['Small', 'SmallBase']
+		'rift': ['Small']
 	},
 	{
 		'offset': 5,
 		'name': '5 years in the future',
 		'avail': [Global.Person.Emily, Global.Person.Nelly],
-		'rift': ['Medium', 'MediumBase']
+		'rift': ['Medium']
 	},
 	{
 		'offset': 20,
 		'name': '20 years in the future',
 		'avail': [Global.Person.Emily, Global.Person.Nelly],
-		'rift': ['Large', 'LargeBase']
+		'rift': ['Large']
 	},
 	{
 		'offset': 60,
@@ -67,7 +67,7 @@ func update_label(value):
 	$Timeline/Label.text = TIME_CONFIG[value]['name']
 		
 func update_bg(value):
-	$Background.color = Global.get_bg_color()
+	$TownCutout.color = Global.get_bg_color()
 	
 func update_indicator(value):
 	var min_pos = 0
