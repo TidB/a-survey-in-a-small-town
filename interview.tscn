@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://person.tscn" type="PackedScene" id=1]
 [ext_resource path="res://interview.gd" type="Script" id=2]
+[ext_resource path="res://font/JosefinSans-Regular.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -12,6 +13,14 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -25,10 +34,35 @@ polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
 position = Vector2( 1600, 320 )
 scale = Vector2( 4, 4 )
 
-[node name="PersonSpeech" type="Polygon2D" parent="."]
+[node name="PersonSpeechBackground" type="Polygon2D" parent="."]
 position = Vector2( 128, 32 )
 antialiased = true
-polygon = PoolVector2Array( 128, 64, 128, 512, 1024, 512, 1024, 320, 1088, 288, 1024, 256, 1024, 64 )
+polygon = PoolVector2Array( 128, 128, 128, 448, 1024, 448, 1024, 320, 1088, 288, 1024, 256, 1024, 128 )
 
-[node name="PlayerSpeech" type="Polygon2D" parent="."]
+[node name="PersonSpeech" type="RichTextLabel" parent="."]
+margin_left = 264.0
+margin_top = 168.0
+margin_right = 1144.0
+margin_bottom = 472.0
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerSpeechBackground" type="Polygon2D" parent="."]
+position = Vector2( 0, -64 )
 polygon = PoolVector2Array( 256, 704, 256, 1024, 1152, 1024, 1152, 704 )
+
+[node name="PlayerSpeech" type="RichTextLabel" parent="."]
+margin_left = 264.0
+margin_top = 648.0
+margin_right = 1144.0
+margin_bottom = 952.0
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

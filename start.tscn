@@ -7,31 +7,31 @@
 [ext_resource path="res://font/Default.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Wobble.shader" type="Shader" id=6]
 
-[sub_resource type="ShaderMaterial" id=5]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 6 )
 shader_param/amount = 3.0
 shader_param/speed = 1.0
 
-[sub_resource type="ShaderMaterial" id=6]
+[sub_resource type="ShaderMaterial" id=2]
 shader = ExtResource( 6 )
-shader_param/amount = 3.0
-shader_param/speed = 2.0
+shader_param/amount = 4.0
+shader_param/speed = 1.5
 
-[sub_resource type="ShaderMaterial" id=7]
+[sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 6 )
 shader_param/amount = 6.0
 shader_param/speed = 1.5
 
-[sub_resource type="ShaderMaterial" id=8]
+[sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 6 )
 shader_param/amount = 10.0
 shader_param/speed = 1.5
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=5]
 size = 60
 font_data = ExtResource( 2 )
 
-[sub_resource type="Shader" id=11]
+[sub_resource type="Shader" id=6]
 code = "shader_type canvas_item;
 
 uniform sampler2D gradient;
@@ -40,23 +40,23 @@ void fragment() {
 	COLOR = texture(gradient, vec2(round(UV.x * 6.0) / 6.0));
 }"
 
-[sub_resource type="ShaderMaterial" id=12]
-shader = SubResource( 11 )
+[sub_resource type="ShaderMaterial" id=7]
+shader = SubResource( 6 )
 shader_param/gradient = ExtResource( 4 )
 
-[sub_resource type="Shader" id=13]
+[sub_resource type="Shader" id=8]
 code = "shader_type canvas_item;
 
 void fragment() {
 	COLOR = vec4(vec3(1, 1, 1) - texture(SCREEN_TEXTURE, SCREEN_UV).rgb, texture(TEXTURE, UV).a);
 }"
 
-[sub_resource type="ShaderMaterial" id=14]
-shader = SubResource( 13 )
+[sub_resource type="ShaderMaterial" id=9]
+shader = SubResource( 8 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
-start_time = 5
+start_time = 0
 
 [node name="Background" type="Polygon2D" parent="."]
 polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
@@ -65,7 +65,7 @@ polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
 
 [node name="Small" type="Polygon2D" parent="Rift"]
 visible = false
-material = SubResource( 5 )
+material = SubResource( 1 )
 position = Vector2( 960, 728 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
@@ -73,21 +73,21 @@ polygon = PoolVector2Array( 0, -32, 0, -48, -16, -24, -8, -8, -16, 8, -8, 8, -16
 
 [node name="Medium" type="Polygon2D" parent="Rift"]
 visible = false
-material = SubResource( 6 )
+material = SubResource( 2 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
-polygon = PoolVector2Array( 944, 656, 936, 672, 944, 688, 928, 704, 936, 712, 944, 712, 944, 736, 936, 744, 928, 768, 928, 776, 944, 776, 960, 760, 992, 792, 1016, 768, 1000, 760, 1008, 744, 992, 728, 1000, 712, 984, 704, 984, 688, 992, 672, 976, 656, 960, 696 )
+polygon = PoolVector2Array( 944, 648, 936, 672, 944, 688, 928, 704, 936, 712, 944, 712, 944, 736, 936, 744, 928, 768, 928, 776, 944, 784, 960, 768, 992, 800, 1016, 768, 1000, 760, 1008, 744, 992, 728, 1000, 712, 984, 704, 984, 688, 992, 672, 976, 648, 960, 688 )
 
 [node name="Large" type="Polygon2D" parent="Rift"]
 visible = false
-material = SubResource( 7 )
+material = SubResource( 3 )
 color = Color( 0, 0, 0, 1 )
 antialiased = true
 polygon = PoolVector2Array( 960, 680, 888, 488, 856, 528, 872, 576, 848, 584, 864, 600, 832, 608, 840, 632, 832, 648, 848, 664, 816, 688, 864, 712, 872, 728, 904, 752, 840, 768, 824, 792, 848, 808, 912, 824, 960, 768, 1016, 832, 1056, 800, 1072, 800, 1056, 784, 1080, 760, 1112, 736, 1056, 736, 1048, 712, 1080, 688, 1120, 688, 1112, 656, 1136, 640, 1096, 624, 1088, 608, 1064, 600, 1080, 576, 1064, 568, 1072, 544, 1056, 520, 1032, 504 )
 
 [node name="Final" type="Polygon2D" parent="Rift"]
 visible = false
-material = SubResource( 8 )
+material = SubResource( 4 )
 position = Vector2( 960, 609 )
 scale = Vector2( 2, 2 )
 z_index = 1
@@ -140,14 +140,14 @@ margin_left = 640.0
 margin_top = 80.0
 margin_right = 1280.0
 margin_bottom = 140.0
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 5 )
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Slider" type="Polygon2D" parent="Timeline"]
-material = SubResource( 12 )
+material = SubResource( 7 )
 position = Vector2( 0, -64 )
 texture = ExtResource( 4 )
 polygon = PoolVector2Array( 0, 64, 0, 128, 1920, 128, 1920, 64 )
@@ -156,8 +156,11 @@ polygon = PoolVector2Array( 0, 64, 0, 128, 1920, 128, 1920, 64 )
 antialiased = true
 polygon = PoolVector2Array( -8, 0, -8, 16, 0, 24, 8, 16, 8, 0 )
 
-[node name="Selection" type="Label" parent="."]
-material = SubResource( 14 )
+[node name="Helper" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Selection" type="Label" parent="Helper"]
+material = SubResource( 9 )
 margin_left = 736.0
 margin_top = 704.0
 margin_right = 1184.0
