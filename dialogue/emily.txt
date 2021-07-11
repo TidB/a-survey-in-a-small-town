@@ -1,19 +1,10 @@
 # -40
-Hiya, uh... sorry, what do you want?
 
-- Good day. We are from the St. Mariana Market Research Division-
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and will conduct a product survey.
 
-You're like... ten years too late for that? Those surveys have stopped coming years ago.
+/ FADE
 
-- There simply was no demand for it. Nevertheless, your contract is still effective.
-
-I guess so... I have to warn you, the interview room is chock-full of boxes and old products and stuff.
-
-[We need the previous part to be kinda 'at the front door' and only after that we get to the interview room...]
-
-- First question
-
-First answer
+- Have you read the information booklet?
 
 # -25
 

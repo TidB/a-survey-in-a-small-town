@@ -1,0 +1,32 @@
+# -40
+
+Oooh, I did not expect to do another interview. This is so nice of you!
+
+- Good day. We are from the St. Mariana Market Research Division and -
+
+Yes, yes, come in and take your seats!
+
+/ FADE
+
+- Have you read the information booklet?
+
+Yes! The product is so adorable, my granddaughter would love it!
+
+- Do you think that the product will substantially alter your future?
+
+Ha, I'm afraid it's not [i]that[/i] adorable. I think that is not your intention, is it?
+
+- Do you think that the product fits into this time?
+
+Oh my, your questions surely are of the stranger kind.
+I find it a bit too modern for my taste - but everything in the electronics store looks too modern for me, ha ha ha!
+
+- As you noticed in the booklet, we will conduct multiple surveys over the next decades with the same product.
+- We hope to meet you again soon.
+
+Decades? My oh my, you really [i]are[/i] late to all this! My old bones won't make it that far, I tell you!
+
+| Decision 1
+- Text for Decision 1
+| Decision 2
+- Text for Decision 2

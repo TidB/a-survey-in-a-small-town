@@ -76,17 +76,6 @@ color = Color( 0, 0, 0, 1 )
 antialiased = true
 polygon = PoolVector2Array( -16, 16, 16, 16, 24, 8, 24, 16, 16, 24, -16, 24, -24, 16, -24, 8 )
 
-[node name="Polygon2D4" type="Polygon2D" parent="Faces/Alex"]
-color = Color( 0, 0, 0, 1 )
-antialiased = true
-polygon = PoolVector2Array( -24, -24, -16, -32, -8, -24, -16, -40 )
-
-[node name="Polygon2D5" type="Polygon2D" parent="Faces/Alex"]
-position = Vector2( 24, 0 )
-color = Color( 0, 0, 0, 1 )
-antialiased = true
-polygon = PoolVector2Array( -24, -24, -16, -24, 0, -32, -8, -32 )
-
 [node name="Alison" type="Node2D" parent="Faces"]
 visible = false
 

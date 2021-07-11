@@ -3,7 +3,7 @@ extends Node2D
 class Dialogue:
 	pass
 	
-enum Subject {PLAYER, PERSON}
+enum Action {PLAYER, PERSON, FADE}
 
 var timer
 
@@ -27,37 +27,56 @@ func parse_dialogue(name):
 	
 	var current_time = null
 	for line in content.strip_edges().split("\n"):
-		if line.strip_edges().empty():
+		line = line.strip_edges()
+		if line.empty():
 			continue
 		elif line.begins_with("#"):
 			current_time = line.split(" ")[1]
 		elif line.begins_with("-"):
-			var player_line = line.split(" ", true, 1)[1].strip_edges()
-			dialogue[current_time].append([Subject.PLAYER, player_line])
+			var player_line = line.split(" ", true, 1)[1]
+			dialogue[current_time].append([Action.PLAYER, player_line])
+		elif line.begins_with("/"):
+			var action = line.split(" ")[1]
+			if action == "FADE":
+				dialogue[current_time].append([Action.FADE])
+		elif line.begins_with("|"):
+			pass
 		else:
-			dialogue[current_time].append([Subject.PERSON, line.strip_edges()])
+			dialogue[current_time].append([Action.PERSON, line])
 	
 	return dialogue
 
 func play(dialogue):
 	var time = Global.TIME_CONFIG[Global.current_time]['offset']
 	for line in dialogue[str(time)]:
-		var box
-		if line[0] == Subject.PLAYER:
-			box = $PlayerSpeech
-		elif line[0] == Subject.PERSON:
-			box = $PersonSpeech
-			
-		$Tween.interpolate_method(box, "set_percent_visible", 0.0, 1.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		$Tween.start()
+		if line[0] in [Action.PLAYER, Action.PERSON]:
+			var box
+			if line[0] == Action.PLAYER:
+				box = $PlayerSpeech
+			elif line[0] == Action.PERSON:
+				box = $PersonSpeech
+				
+			$Tween.interpolate_method(box, "set_percent_visible", 0.0, 1.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			$Tween.start()
 
-		box.text = line[1]
+			box.bbcode_text = line[1]
 			
-		var word_count = len(line[1].split(" "))
-		var reading_time = max(1.5, word_count / 225.0 * 60)
-		print(word_count, " words, equals ", reading_time, " seconds")
-		timer.start(reading_time)
-		yield(timer, "timeout")
-		
-		$Tween.interpolate_method(box, "set_percent_visible", 1.0, 0.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		$Tween.start()
+			var word_count = len(line[1].split(" "))
+			var reading_time = max(1.5, word_count / 225.0 * 60)
+			print(word_count, " words, equals ", reading_time, " seconds")
+			timer.start(reading_time)
+			yield(timer, "timeout")
+			
+			$Tween.interpolate_method(box, "set_percent_visible", 1.0, 0.0, 0.1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			$Tween.start()
+		elif line[0] == Action.FADE:
+			$Tween2.interpolate_property($Fade, "color", Color(0, 0, 0, 0), Color(0, 0, 0, 1), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			$Tween2.start()
+			
+			yield($Tween2, "tween_completed")
+			
+			$Tween2.interpolate_property($Fade, "color", Color(0, 0, 0, 1), Color(0, 0, 0, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			$Tween2.start()
+			
+			timer.start(1)
+			yield(timer, "timeout")
