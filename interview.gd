@@ -51,13 +51,16 @@ func play(dialogue):
 	for line in dialogue[str(time)]:
 		if line[0] in [Action.PLAYER, Action.PERSON]:
 			var box
+			var tween
 			if line[0] == Action.PLAYER:
 				box = $PlayerSpeech
+				tween = $TweenPlayer
 			elif line[0] == Action.PERSON:
 				box = $PersonSpeech
+				tween = $TweenPerson
 				
-			$Tween.interpolate_method(box, "set_percent_visible", 0.0, 1.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-			$Tween.start()
+			tween.interpolate_method(box, "set_percent_visible", 0.0, 1.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			tween.start()
 
 			box.bbcode_text = line[1]
 			
@@ -67,16 +70,16 @@ func play(dialogue):
 			timer.start(reading_time)
 			yield(timer, "timeout")
 			
-			$Tween.interpolate_method(box, "set_percent_visible", 1.0, 0.0, 0.1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-			$Tween.start()
+			tween.interpolate_method(box, "set_percent_visible", 1.0, 0.0, 0.1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			tween.start()
 		elif line[0] == Action.FADE:
-			$Tween2.interpolate_property($Fade, "color", Color(0, 0, 0, 0), Color(0, 0, 0, 1), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-			$Tween2.start()
+			$TweenFade.interpolate_property($Fade, "color", Color(0, 0, 0, 0), Color(0, 0, 0, 1), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			$TweenFade.start()
 			
-			yield($Tween2, "tween_completed")
+			yield($TweenFade, "tween_completed")
 			
-			$Tween2.interpolate_property($Fade, "color", Color(0, 0, 0, 1), Color(0, 0, 0, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-			$Tween2.start()
+			$TweenFade.interpolate_property($Fade, "color", Color(0, 0, 0, 1), Color(0, 0, 0, 0), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			$TweenFade.start()
 			
 			timer.start(1)
 			yield(timer, "timeout")
