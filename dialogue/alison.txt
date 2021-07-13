@@ -20,13 +20,16 @@ Ha, I'm afraid it's not [i]that[/i] adorable. I think that is not your intention
 
 Oh my, your questions surely are of the stranger kind.
 I find it a bit too modern for my taste - but everything in the electronics store looks too modern for me, ha ha ha!
+/ SKIP
+Last time I went in there, they had these weird toasters with [i]FIVE[/i] slots, can you imagine that? Back in [i]my[/i] days, we didn't have these fancy things - we ate the bread raw! We could not spare the extra energy for it! Then again, it was the [i]good[/i] bread from the nearby farm, Mellingburg's. What a wonderful family, so lovely! We attended their wedding, they rented the biggest barn in the whole state! They were such a cute couple! Have you heard of them? Anyway, they made great bread, whole grain and not the cheap kind you see in the supermarkets! A real let down, I tell you! Too bad they had to close down when the inspectors came around, they have no idea what bread should taste like! It all is just a conspiracy of BIG GRAIN, and I am the only person to see it yet!
+
+|,0,[Push on],[Say nothing]
+
+= 0 0
+- Sorry, we have to continue.
+Oh, yes. Sorry.
 
 - As you noticed in the booklet, we will conduct multiple surveys over the next decades with the same product.
 - We hope to meet you again soon.
 
 Decades? My oh my, you really [i]are[/i] late to all this! My old bones won't make it that far, I tell you!
-
-| Decision 1
-- Text for Decision 1
-| Decision 2
-- Text for Decision 2

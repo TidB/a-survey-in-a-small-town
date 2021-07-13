@@ -39,38 +39,97 @@ polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
 position = Vector2( 1600, 320 )
 scale = Vector2( 4, 4 )
 
-[node name="PersonSpeechBackground" type="Polygon2D" parent="."]
+[node name="PersonSpeechBg" type="Polygon2D" parent="."]
 position = Vector2( 128, 32 )
 antialiased = true
 polygon = PoolVector2Array( 128, 128, 128, 448, 1024, 448, 1024, 320, 1088, 288, 1024, 256, 1024, 128 )
+
+[node name="PlayerSpeechBg" type="Polygon2D" parent="."]
+position = Vector2( 0, -64 )
+antialiased = true
+polygon = PoolVector2Array( 256, 704, 256, 1024, 1152, 1024, 1152, 704 )
 
 [node name="PersonSpeech" type="RichTextLabel" parent="."]
 margin_left = 264.0
 margin_top = 168.0
 margin_right = 1144.0
-margin_bottom = 472.0
+margin_bottom = 952.0
+mouse_filter = 2
 custom_fonts/italics_font = SubResource( 5 )
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="PlayerSpeechBackground" type="Polygon2D" parent="."]
-position = Vector2( 0, -64 )
-antialiased = true
-polygon = PoolVector2Array( 256, 704, 256, 1024, 1152, 1024, 1152, 704 )
 
 [node name="PlayerSpeech" type="RichTextLabel" parent="."]
 margin_left = 264.0
 margin_top = 648.0
 margin_right = 1144.0
 margin_bottom = 952.0
+mouse_filter = 2
 custom_fonts/italics_font = SubResource( 5 )
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choice" type="Node2D" parent="."]
+visible = false
+position = Vector2( 256, 640 )
+
+[node name="Choice1Bg" type="Area2D" parent="Choice"]
+z_as_relative = false
+collision_mask = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="Choice/Choice1Bg"]
+polygon = PoolVector2Array( 0, 0, 384, 0, 384, 320, 0, 320 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Choice/Choice1Bg"]
+polygon = PoolVector2Array( 0, 0, 0, 0, 0, 0 )
+
+[node name="Choice2Bg" type="Area2D" parent="Choice"]
+position = Vector2( 512, 0 )
+z_as_relative = false
+collision_mask = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="Choice/Choice2Bg"]
+polygon = PoolVector2Array( 0, 0, 384, 0, 384, 320, 0, 320 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Choice/Choice2Bg"]
+polygon = PoolVector2Array( 0, 0, 0, 0, 0, 0 )
+
+[node name="Choice1" type="RichTextLabel" parent="Choice"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 376.0
+margin_bottom = 312.0
+mouse_filter = 2
+custom_fonts/italics_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Choice2" type="RichTextLabel" parent="Choice"]
+margin_left = 520.0
+margin_top = 8.0
+margin_right = 888.0
+margin_bottom = 312.0
+mouse_filter = 2
+custom_fonts/italics_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -84,3 +143,6 @@ __meta__ = {
 [node name="Fade" type="Polygon2D" parent="."]
 color = Color( 0, 0, 0, 0 )
 polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
+
+[connection signal="input_event" from="Choice/Choice1Bg" to="." method="_on_Choice1Bg_input_event"]
+[connection signal="input_event" from="Choice/Choice2Bg" to="." method="_on_Choice2Bg_input_event"]

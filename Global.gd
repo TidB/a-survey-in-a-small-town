@@ -1,6 +1,7 @@
 extends Node
 
 enum Person {Ralf, Mary, Alison, Emily, Alex, Nelly}
+const TEXT_SPEED = 2.0
 
 const TIME_CONFIG = [
 	{
@@ -63,6 +64,9 @@ func _input(event):
 func switch_to_interview(person):
 	interview_person = person
 	get_tree().change_scene("res://interview.tscn")
+	
+func switch_to_town():
+	get_tree().change_scene("res://start.tscn")
 
 func get_bg_color():
 	var gradient = load("res://bg_gradient.tres").gradient
