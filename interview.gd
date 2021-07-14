@@ -8,18 +8,19 @@ signal choice_picked
 
 var timer
 var choices = []
+var happiness = 100
+var productivity = 50
 
 func _ready():
 	$person.person = Global.interview_person
 	$Background.color = Global.get_bg_color()
 	$Choice/Choice1Bg/CollisionPolygon2D.polygon = $Choice/Choice1Bg/Polygon2D.polygon
 	$Choice/Choice2Bg/CollisionPolygon2D.polygon = $Choice/Choice2Bg/Polygon2D.polygon
+	update_values()
 	timer = Timer.new()
 	add_child(timer)
 	var dialogue = parse_dialogue(Global.name(Global.interview_person))
-	print(dialogue)
 	play(dialogue)
-	
 	
 func parse_dialogue(name):
 	var file = File.new()
@@ -32,17 +33,21 @@ func parse_dialogue(name):
 		dialogue[str(t['offset'])] = []
 	
 	var current_time = null
+	var skip = false
 	var condition = []
 	for line in content.strip_edges().split("\n"):
 		line = line.strip_edges()
 		if line.empty():
 			condition = []
+			skip = false
 		elif line.begins_with("#"):
 			current_time = line.split(" ")[1]
 		elif line.begins_with("/"):
 			var action = line.split(" ")[1]
 			if action == "FADE":
 				dialogue[current_time].append([Action.FADE])
+			elif action == "SKIP":
+				skip = true
 		elif line.begins_with("|"):
 			var args = line.split(",")
 			dialogue[current_time].append([Action.CHOICE, int(args[1]), args[2], args[3]])
@@ -51,9 +56,9 @@ func parse_dialogue(name):
 			condition = [int(args[1]), int(args[2])]
 		elif line.begins_with("-"):
 			var player_line = line.split(" ", true, 1)[1]
-			dialogue[current_time].append([Action.PLAYER, player_line, condition])
+			dialogue[current_time].append([Action.PLAYER, player_line, condition, skip])
 		else:
-			dialogue[current_time].append([Action.PERSON, line, condition])
+			dialogue[current_time].append([Action.PERSON, line, condition, skip])
 	
 	return dialogue
 
@@ -81,6 +86,8 @@ func play(dialogue):
 			
 			var word_count = len(line[1].split(" "))
 			var reading_time = max(1.5, word_count / 225.0 * 60) / Global.TEXT_SPEED
+			if line[3]:
+				reading_time = 3
 			print(word_count, " words, equals ", reading_time, " seconds")
 			timer.start(reading_time)
 			yield(timer, "timeout")
@@ -123,10 +130,28 @@ func play(dialogue):
 
 func _on_Choice1Bg_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		choices.append(0)
-		emit_signal("choice_picked")
+		choice(0)
 
 func _on_Choice2Bg_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		choices.append(1)
-		emit_signal("choice_picked")
+		choice(1)
+		
+func choice(num):
+	if num and productivity <= 10:
+		$Choice/Choice2.bbcode_text = "Your productivity is too low to choose this option"
+		return
+	
+	# 0 = bad, 1 = good. innovative & nuanced
+	if not num: 
+		happiness = clamp(happiness - 30, 0, 100)
+		productivity = clamp(productivity + 30, 0, 100)
+	else:
+		happiness = clamp(happiness + 30, 0, 100)
+		productivity = clamp(productivity - 30, 0, 100)
+	update_values()
+	choices.append(num)
+	emit_signal("choice_picked")
+
+func update_values():
+	$Values/HappyLabel.text = "%s's Happiness: %d%%" % [Global.name(Global.interview_person), happiness]
+	$Values/ProdLabel.text = "Your Productivity: %d%%" % productivity
