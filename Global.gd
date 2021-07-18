@@ -17,12 +17,6 @@ const TIME_CONFIG = [
 		'rift': []
 	},
 	{
-		'offset': -2,
-		'name': '2 years ago',
-		'avail': [Person.Mary, Person.Alex, Person.Emily,  Person.Nelly],
-		'rift': []
-	},
-	{
 		'offset': 0,
 		'name': 'Today',
 		'avail': [Person.Alex, Person.Emily, Person.Nelly],
@@ -48,7 +42,7 @@ const TIME_CONFIG = [
 	},
 ]
 
-var timelines = 7
+var timelines = 6
 var current_time
 var productivity = 50
 var interview_person

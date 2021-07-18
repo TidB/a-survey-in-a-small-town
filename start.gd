@@ -1,6 +1,6 @@
 extends Node2D
 
-export(int) var start_time = 3
+export(int) var start_time = 2
 
 func _ready():
 	Global.current_time = start_time
