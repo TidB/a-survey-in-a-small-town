@@ -8,13 +8,46 @@ Yes, yes, come in and take your seats!
 
 / FADE
 
+- How are you?
+
+Oh I'm fine, thanks for asking! How was your journey?
+
 - Have you read the information booklet?
 
-Yes! The product is so adorable, my granddaughter would love it!
+/ SKIP
+Yes! The product is so adorable, my granddaughter would love it! You have to know, she used to play with [i]real[/i] toys during her early days, but then the electronics started propping up! I talked to her parents that they should go back to the good old toys but they did not want to - always saying that this is the future, and that it is important to learn to deal with electronics. Laughable, in my opinion. They are just getting addicted!
+
+|,0,[Push on],[Say nothing]
+
+= 0 0
+- Sorry, please keep your answers concise.
+Oh, yes. Sorry.
+
+= 0 1
+I have seen hundreds of young kids now requiring glasses for even the simplest tasks! This can only lead to chaos, everyone is staring at their screens now - the eyesight is rapidly declining! Some can see less than I do! And why? Because we used to play in the woods, playing with sticks and stones instead of sitting on our office chairs all day, pressing buttons on a plastic device! 
+
+- Would you tell friends and family about the product?
+
+You know, maybe. Truth be told, this is a very common question and at this point, everyone is probably sick of me trying to tell them about a new thing being researched here!
 
 - Do you think that the product will substantially alter your future?
 
 Ha, I'm afraid it's not [i]that[/i] adorable. I think that is not your intention, is it?
+
+- What does your typical day look like?
+
+I love this question! I used to get up at 05:00 to catch any parking violators, but nowadays there are barely any cars here anymore! Oh I miss it, so I wake up somewhere before noon now and prepare breakfast, reading a couple books then. The new Haggendreyer novel is marvellous, you should give it a read!
+/ SKIP
+Anyway, I try to go on an afternoon walk every now and then, my doctor suggested this to me! I try to have dinner around the same time, but the books are often so good I read them well into the night! I can give you some of the novels I have, I have so many suggestions for you! Do you like stories set in small lovely towns? I have the Fergusson trilogy right there behind the counter, can you see it? I like how calming it is for my soul, better than any doctor ha ha!
+
+|,1,[Push on],[Say nothing]
+
+= 1 0
+- Please keep your answers concise.
+Sorry.
+
+= 1 1
+But you young people are probably looking for some action! Here, see the big dark blue book on the first row? It's called 'The Knight Shadows in the Order of Theretrestia' and oh my, this book is a [i]journey[/i]! I spent a whole week reading this story and had to catch a break multiple times because my heart was racing because of the fight descriptions! Not my cup of tea, but you would surely enjoy it!
 
 - Do you think that the product fits into this time?
 
@@ -23,17 +56,18 @@ I find it a bit too modern for my taste - but everything in the electronics stor
 / SKIP
 Last time I went in there, they had these weird toasters with [i]FIVE[/i] slots, can you imagine that? Back in [i]my[/i] days, we didn't have these fancy things - we ate the bread raw! We could not spare the extra energy for it! Then again, it was the [i]good[/i] bread from the nearby farm, Mellingburg's. What a wonderful family, so lovely! We attended their wedding, they rented the biggest barn in the whole state! They were such a cute couple! Have you heard of them? Anyway, they made great bread, whole grain and not the cheap kind you see in the supermarkets! A real let down, I tell you! Too bad they had to close down when the inspectors came around, they have no idea what bread should taste like! It all is just a conspiracy of BIG GRAIN, and I am the only person to see it yet!
 
-|,0,[Push on],[Say nothing]
+|,2,[Push on],[Say nothing]
 
-= 0 0
-- Please keep your answers concise.
-Oh, yes. Sorry.
+= 2 0
+- You need to keep your answers concise.
+Yes, yes. You know, it has gone so quiet here lately. This town is not what it used to be.
 
-= 0 1
+= 2 1
 I talked about it with Natalie, you might know her if you drove here through the north route (such bad traffic!) and stopped by the diner just outside, the bread they have there is wonderful too! But still, she did not see how she is being manipulated, almost puppeteered! You know what, before you leave you should definitely stop by here again, I will prepare you the best sandwiches you will ever have tasted! True full grain!
 Do you like lettuce? I hope you do, because I always and only use a combination of four different lettuces for my sandwiches. Most people do not even realize that lettuces have flavors! They just look at the textures and colors and think that is all! There is a whole [i]dimension[/i] the people cannot even [i]fathom[/i] and yet they remain ignorant! This is a charged topic for many, yet I don't understand why!
 
-- As you noticed in the booklet, we will conduct multiple surveys over the next decades with the same product.
-- We hope to meet you again soon.
+- This concludes the first round of interview. As mentioned in the booklet, we will conduct multiple surveys over the next decades with the same product.
+- Thank you for your participation. We hope to meet you again soon.
 
 Decades? My oh my, you really [i]are[/i] late to all this! My old bones won't make it that far, I tell you!
+Have a good day!

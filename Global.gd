@@ -50,6 +50,7 @@ const TIME_CONFIG = [
 
 var timelines = 7
 var current_time
+var productivity = 50
 var interview_person
 
 func _ready():

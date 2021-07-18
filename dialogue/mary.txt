@@ -2,12 +2,22 @@
 
 - Good day. We are from the St. Mariana Market Research Division and will conduct a product survey.
 
-A-ha-ha! Never thought you'd come around here again!
+A-ha-ha! Never thought you kinda people would come around here again!
 
 / FADE
 
 - Have you read the information booklet?
 
+I sure have! Not too impressed so far, but maybe you have a couple surprises planned for me, ha ha ha! 
+
 # -25
+
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+Ah you're back! I almost thought you were just teasing us for such a long time!
+
+- Have you read the information booklet?
+
+Ha, you bet I refreshed my mind on that! Can't say much has changed since then.
 
 # -2

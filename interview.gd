@@ -9,7 +9,6 @@ signal choice_picked
 var timer
 var choices = []
 var happiness = 100
-var productivity = 50
 
 func _ready():
 	$person.person = Global.interview_person
@@ -137,21 +136,21 @@ func _on_Choice2Bg_input_event(viewport, event, shape_idx):
 		choice(1)
 		
 func choice(num):
-	if num and productivity <= 10:
-		$Choice/Choice2.bbcode_text = "Your productivity is too low to choose this option"
+	if num and Global.productivity <= 20:
+		$Choice/Choice2.bbcode_text = "Your productivity is too low to choose this option ;)"
 		return
 	
 	# 0 = bad, 1 = good. innovative & nuanced
 	if not num: 
 		happiness = clamp(happiness - 30, 0, 100)
-		productivity = clamp(productivity + 30, 0, 100)
+		Global.productivity = clamp(Global.productivity + 15, 0, 100)
 	else:
 		happiness = clamp(happiness + 30, 0, 100)
-		productivity = clamp(productivity - 30, 0, 100)
+		Global.productivity = clamp(Global.productivity - 30, 0, 100)
 	update_values()
 	choices.append(num)
 	emit_signal("choice_picked")
 
 func update_values():
 	$Values/HappyLabel.text = "%s's Happiness: %d%%" % [Global.name(Global.interview_person), happiness]
-	$Values/ProdLabel.text = "Your Productivity: %d%%" % productivity
+	$Values/ProdLabel.text = "Your Productivity: %d%%" % Global.productivity
