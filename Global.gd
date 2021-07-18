@@ -1,19 +1,19 @@
 extends Node
 
-enum Person {Ralf, Mary, Alison, Emily, Alex, Nelly}
+enum Person {Mary, Alison, Emily, Alex, Nelly}
 const TEXT_SPEED = 2.0
 
 const TIME_CONFIG = [
 	{
 		'offset': -40,
 		'name': '40 years ago',
-		'avail': [Person.Ralf, Person.Mary, Person.Alison, Person.Emily, Person.Alex, Person.Nelly],
+		'avail': [Person.Mary, Person.Alison, Person.Emily, Person.Alex, Person.Nelly],
 		'rift': []
 	},
 	{
 		'offset': -25,
 		'name': '25 years ago',
-		'avail': [Person.Ralf, Person.Mary, Person.Alex, Person.Emily, Person.Nelly],
+		'avail': [Person.Mary, Person.Alex, Person.Emily, Person.Nelly],
 		'rift': []
 	},
 	{

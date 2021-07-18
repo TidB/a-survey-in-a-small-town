@@ -110,28 +110,24 @@ polygon = PoolVector2Array( 0, 0, 0, 1080, 848, 1080, 848, 864, 688, 704, 832, 4
 
 [node name="People" type="Node" parent="."]
 
-[node name="Ralf" parent="People" instance=ExtResource( 1 )]
-position = Vector2( 832, 273 )
-
 [node name="Mary" parent="People" instance=ExtResource( 1 )]
-position = Vector2( 1088, 273 )
-person = 1
+position = Vector2( 960, 272 )
 
 [node name="Alison" parent="People" instance=ExtResource( 1 )]
 position = Vector2( 1346, 701 )
-person = 2
+person = 1
 
 [node name="Emily" parent="People" instance=ExtResource( 1 )]
 position = Vector2( 1072, 977 )
-person = 3
+person = 2
 
 [node name="Alex" parent="People" instance=ExtResource( 1 )]
 position = Vector2( 848, 977 )
-person = 4
+person = 3
 
 [node name="Nelly" parent="People" instance=ExtResource( 1 )]
 position = Vector2( 574, 701 )
-person = 5
+person = 4
 
 [node name="Timeline" type="Node2D" parent="."]
 
