@@ -2,9 +2,47 @@
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and will conduct a product survey.
 
+ma?
+
+/ FADE
+
+- How are you?
+
+ma?
+where ma?
+
+- Have you read the information booklet?
+
+i have book!
+
+- Would you tell friends and family about the product?
+
+ma?
+
+- Do you think that the product will substantially alter your future?
+
+pro- pro-...
+
+- What is your typical day like?
+
+mama food!
+
+- Does the product fit into this time?
+
+[uncontrolled wailing]
+
+- This concludes the first round of interview. As mentioned in the booklet, we will conduct multiple surveys over the next decades with the same product.
+- Thank you for your participation. We hope to meet you again soon.
+
+[uncontrolled wailing]
+
 # -25
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+Oh, mom told me about you guys. Can't you just make up some responses about how cool I find your stuff?
+
+/ FADE
 
 # 0
 
