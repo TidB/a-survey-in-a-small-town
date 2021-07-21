@@ -6,8 +6,8 @@ class Dialogue:
 enum Action {PLAYER, PERSON, FADE, CHOICE}
 signal choice_picked
 
+var current_choice
 var timer
-var choices = []
 var happiness = 100
 
 func _ready():
@@ -33,12 +33,14 @@ func parse_dialogue(name):
 	
 	var current_time = null
 	var skip = false
+	var last_cond = null
 	var condition = []
 	for line in content.strip_edges().split("\n"):
 		line = line.strip_edges()
 		if line.empty():
 			condition = []
 			skip = false
+			last_cond = null
 		elif line.begins_with("#"):
 			current_time = line.split(" ")[1]
 		elif line.begins_with("/"):
@@ -49,10 +51,14 @@ func parse_dialogue(name):
 				skip = true
 		elif line.begins_with("|"):
 			var args = line.split(",")
-			dialogue[current_time].append([Action.CHOICE, int(args[1]), args[2], args[3]])
+			dialogue[current_time].append([Action.CHOICE, args[1], args[2], args[3]])
 		elif line.begins_with("="):
-			var args = line.split(" ")
-			condition = [int(args[1]), int(args[2])]
+			if not last_cond == null:
+				condition = [last_cond, 1]
+			else:
+				var args = line.split(" ")
+				condition = [args[1], 0]
+				last_cond = args[1]
 		elif line.begins_with("-"):
 			var player_line = line.split(" ", true, 1)[1]
 			dialogue[current_time].append([Action.PLAYER, player_line, condition, skip])
@@ -65,9 +71,13 @@ func play(dialogue):
 	var time = Global.TIME_CONFIG[Global.current_time]['offset']
 	for line in dialogue[str(time)]:
 		if line[0] in [Action.PLAYER, Action.PERSON]:
-			if line[2]:
-				if choices[line[2][0]] != line[2][1]:
-					continue
+			var condition = line[2]
+			if condition:
+				if condition[0] in Global.choices:
+					if Global.choices[condition[0]] != condition[1]:
+						continue
+				else:
+					print("Choice '", condition[0], "' not defined!")
 			
 			var box
 			var tween
@@ -94,6 +104,8 @@ func play(dialogue):
 			tween.interpolate_method(box, "set_percent_visible", 1.0, 0.0, 0.1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 			tween.start()
 		elif line[0] == Action.CHOICE:
+			current_choice = line[1]
+			
 			$PlayerSpeech.visible = false
 			$PlayerSpeechBg.visible = false
 			$Choice.visible = true
@@ -148,7 +160,9 @@ func choice(num):
 		happiness = clamp(happiness + 30, 0, 100)
 		Global.productivity = clamp(Global.productivity - 30, 0, 100)
 	update_values()
-	choices.append(num)
+	if current_choice:
+		Global.choices[current_choice] = num
+		current_choice = null
 	emit_signal("choice_picked")
 
 func update_values():

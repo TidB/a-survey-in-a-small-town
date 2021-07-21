@@ -42,6 +42,8 @@ const TIME_CONFIG = [
 	},
 ]
 
+var choices = {}
+
 var timelines = 6
 var current_time
 var productivity = 50
