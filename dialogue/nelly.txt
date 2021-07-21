@@ -31,7 +31,7 @@ mama food!
 
 [uncontrolled wailing]
 
-- This concludes the first round of interview. As mentioned in the booklet, we will conduct multiple surveys over the next decades with the same product.
+- This concludes the first round of interviews. As mentioned in the booklet, we will conduct multiple surveys over the next decades with the same product.
 - Thank you for your participation. We hope to meet you again soon.
 
 [uncontrolled wailing]
@@ -42,7 +42,40 @@ mama food!
 
 Oh, mom told me about you guys. Can't you just make up some responses about how cool I find your stuff?
 
+- You are contractually obliged to answer all questions earnestly.
+
 / FADE
+
+- How are you?
+
+I'm okay. I saw that mom had that look on her face again, she doesn't like that I'm talking to you.
+
+- Have you read the information booklet?
+
+Yeah... maybe it'll make sense to me when I'm older.
+
+- Have you changed?
+
+What do you mean, changed since when?
+- Since the last interview.
+What last interview?
+
+- What is your typical day like?
+
+Uh, I go to school, then I do homework, play on the computer and then sleep. Had music class today, hated it. Analyzing sonatas for the seventieth time.
+
+- What are your current worries?
+
+The geography exam is gonna be pretty hard. I studied so much for it, but the teacher's probably gonna ask for like 20 random capitals, nobody can do that! 
+
+- Does the product fit into this time?
+
+It looks good. Not sure how people would use it currently though. Mom wouldn't use it.
+
+- This concludes the second round of interviews. Thank you for your participation. We hope to meet you again soon.
+This [i]actually[/i] was the second round? When was the first one?
+- We don't know yet.
+What?
 
 # 0
 

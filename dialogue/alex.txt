@@ -40,3 +40,44 @@ Huh? It's on the modern side, but not that it's out of place. Probably something
 # -25
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+Oh. Oh, wow. Didn't think you'd get back here.
+
+= -25nellyVisitedBeforeAlex
+Nelly told me you already visited her? WHY? Please, just can't you go away? What are you doing?
+=
+Come in, quickly before Nelly sees you. Why did you even talk to her last time?
+At least she doesn't remember you.
+
+- How are you?
+
+Alright. The mood is down a bit since Alison left - I hope you didn't leave a super negative impression with her. She didn't speak fondly of you.
+
+- Have you read the information booklet?
+
+Gave it a proper read this time, but it makes less sense the further I got. You will spend decades on this?
+
+- Have you changed?
+
+I hope not.
+
+- What is your typical day like?
+
+I took up my work at the pharmacy again, so it's that for the first half of the day and then it's your usual household routine.
+I used to chat with Alison in the evenings. I could call her, or drive to her care home, but it doesn't feel right - like the conversations were always meant to be short, at a transient space.
+
+- What are your current worries?
+
+I worry about the town. And about Nelly.
+
+- Does the product fit into this time?
+
+More now than last time you asked. Still, looks more like something on the cover of a tech magazine.
+
+- This concludes the second round of interviews. Thank you for your participation. We hope to meet you again soon.
+
+Eh...
+
+# 0
+
+

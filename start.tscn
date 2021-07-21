@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://person.tscn" type="PackedScene" id=1]
 [ext_resource path="res://font/JosefinSans-Regular.ttf" type="DynamicFontData" id=2]
@@ -26,6 +26,26 @@ shader_param/speed = 1.5
 shader = ExtResource( 6 )
 shader_param/amount = 10.0
 shader_param/speed = 1.5
+
+[sub_resource type="Curve" id=11]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.144737, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=12]
+curve = SubResource( 11 )
+
+[sub_resource type="ParticlesMaterial" id=10]
+emission_shape = 2
+emission_box_extents = Vector3( 960, 750, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = -20.0
+radial_accel_random = 0.24
+scale = 2.0
+scale_random = 1.0
+scale_curve = SubResource( 12 )
+color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 60
@@ -56,6 +76,7 @@ shader = SubResource( 8 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
+start_time = 5
 
 [node name="Background" type="Polygon2D" parent="."]
 polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
@@ -127,6 +148,13 @@ person = 3
 [node name="Nelly" parent="People" instance=ExtResource( 1 )]
 position = Vector2( 574, 701 )
 person = 4
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 960, 728 )
+amount = 20000
+lifetime = 4.0
+preprocess = 2.0
+process_material = SubResource( 10 )
 
 [node name="Timeline" type="Node2D" parent="."]
 
