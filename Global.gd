@@ -8,41 +8,48 @@ const TIME_CONFIG = [
 		'offset': -40,
 		'name': '40 years ago',
 		'avail': [Person.Mary, Person.Alison, Person.Emily, Person.Alex, Person.Nelly],
-		'rift': []
+		'rift': [],
+		'wind': [0, 0, 0],
 	},
 	{
 		'offset': -25,
 		'name': '25 years ago',
 		'avail': [Person.Mary, Person.Alex, Person.Emily, Person.Nelly],
-		'rift': []
+		'rift': [],
+		'wind': [0, 0, 0],
 	},
 	{
 		'offset': 0,
 		'name': 'Today',
 		'avail': [Person.Alex, Person.Emily, Person.Nelly],
-		'rift': ['Small']
+		'rift': ['Small'],
+		'wind': [1000, -5, 1],
 	},
 	{
 		'offset': 5,
 		'name': '5 years in the future',
 		'avail': [Person.Emily, Person.Nelly],
-		'rift': ['Medium']
+		'rift': ['Medium'],
+		'wind': [2500, -10, 1.25],
 	},
 	{
 		'offset': 20,
 		'name': '20 years in the future',
 		'avail': [Person.Emily, Person.Nelly],
-		'rift': ['Large']
+		'rift': ['Large'],
+		'wind': [7500, -20, 1.5],
 	},
 	{
 		'offset': 60,
 		'name': '60 years in the future',
 		'avail': [Person.Nelly],
-		'rift': ['Final', 'FinalBase']
+		'rift': ['Final', 'FinalBase'],
+		'wind': [20000, -20, 2],
 	},
 ]
 
 var choices = {}
+var picked = []
 
 var timelines = 6
 var current_time

@@ -2,6 +2,7 @@ extends Area2D
 
 export (Global.Person) var person setget set_person
 export (bool) var active setget set_active 
+export (bool) var done setget set_done
 
 signal entered(name)
 signal exited(name)
@@ -21,6 +22,12 @@ func set_active(value):
 	active = value
 	$Faces.get_node(name()).visible = active
 	$Faces/Unavailable.visible = not active
+	$Polygon2D.color = Color.white if active else Color.darkgray
+	
+func set_done(value):
+	done = value
+	$Faces.get_node(name()).visible = active
+	$Faces/Done.visible = not active
 	$Polygon2D.color = Color.white if active else Color.darkgray
 
 func _on_person_input_event(viewport, event, shape_idx):
