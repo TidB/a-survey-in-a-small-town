@@ -137,7 +137,7 @@ func play(dialogue):
 	
 	timer.start(1)
 	yield(timer, "timeout")
-	Global.switch_to_town()
+	Global.interview_finished()
 
 func _on_Choice1Bg_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
