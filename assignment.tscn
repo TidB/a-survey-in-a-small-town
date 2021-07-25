@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://font/JosefinSans-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assignment.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -14,16 +15,63 @@ font_data = ExtResource( 1 )
 size = 35
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 35
+font_data = ExtResource( 1 )
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="Background" type="Polygon2D" parent="."]
 color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
 
-[node name="assignment" type="Node2D" parent="."]
-position = Vector2( 704, 192 )
+[node name="survey" type="Node2D" parent="."]
+position = Vector2( 96, 160 )
 
-[node name="AssignmentBg" type="Polygon2D" parent="assignment"]
+[node name="bg" type="Polygon2D" parent="survey"]
+polygon = PoolVector2Array( 0, 0, 512, 0, 512, 696, 0, 696 )
+
+[node name="Label" type="Label" parent="survey"]
+margin_left = 120.0
+margin_top = 24.0
+margin_right = 390.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SURVEY"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="survey"]
+margin_left = 24.0
+margin_top = 88.0
+margin_right = 488.0
+margin_bottom = 672.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "
+Heyyyy good morning :D
+This is a multi-round temporal survey, let's start!
+
+
+General guidelines:
+- Keep productivity high
+- Happiness too, if possible
+- Have fun ;)
+
+
+You can do it, we believe in you!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="assignment" type="Node2D" parent="."]
+position = Vector2( 704, 160 )
+
+[node name="bg" type="Polygon2D" parent="assignment"]
 polygon = PoolVector2Array( 0, 0, 512, 0, 512, 696, 0, 696 )
 
 [node name="Label" type="Label" parent="assignment"]
@@ -46,24 +94,19 @@ margin_bottom = 672.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "
-Heyyyy good morning :D
-This is a multi-round temporal survey, let's start!
+Round 1: Timeline ±0
 
-- Round 1: Timeline ±0
-- Keep productivity high
-- Happiness too, if possible
-- Have fun ;)
+This is technically the first interview, so no choices yet :)
 
-Find the questions in attachment 1-1.
-
-PS: You can do it, we believe in you!"
+Find the questions in attachment 1-1."
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="evaluation" type="Node2D" parent="."]
+position = Vector2( 0, -32 )
 
-[node name="EvaluationBg" type="Polygon2D" parent="evaluation"]
+[node name="bg" type="Polygon2D" parent="evaluation"]
 position = Vector2( 1312, 192 )
 polygon = PoolVector2Array( 0, 0, 512, 0, 512, 696, 0, 696 )
 
@@ -92,3 +135,25 @@ text = "
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Area2D" parent="."]
+position = Vector2( 864, 928 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Button"]
+polygon = PoolVector2Array( 0, 0, 0, 64, 192, 64, 192, 0 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Button"]
+
+[node name="Label" type="Label" parent="Button"]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 185.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Continue"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="input_event" from="Button" to="." method="_on_Button_input_event"]

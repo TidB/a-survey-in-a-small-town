@@ -2,6 +2,7 @@ extends Node
 
 enum Person {Mary, Alison, Emily, Alex, Nelly}
 const TEXT_SPEED = 5.0
+enum ReportState {Survey, Assignment, Evaluation}
 
 const ORDER = [2, 1, 3, 4, 0, 5]
 const TIME_CONFIG = [
@@ -53,9 +54,10 @@ var choices = {}
 var picked = []
 
 var timelines = 6
-var current_step = 1
+var current_step = 0
 var current_time setget ,get_current_time
 var current_config setget ,get_current_config
+var report_state = ReportState.Survey
 var productivity = 50
 var interview_person
 
@@ -81,8 +83,17 @@ func switch_to_interview(person):
 func interview_finished():
 	if len(picked) >= len(self.current_config["avail"]):
 		current_step += 1
+		report_state = ReportState.Evaluation
+		picked = []
 		get_tree().change_scene("res://assignment.tscn")
 	else:
+		get_tree().change_scene("res://start.tscn")
+
+func evaluation_finished():
+	if report_state == ReportState.Evaluation or report_state == ReportState.Survey:
+		report_state = ReportState.Assignment
+		get_tree().change_scene("res://assignment.tscn")
+	else: 
 		get_tree().change_scene("res://start.tscn")
 
 func get_bg_color():
