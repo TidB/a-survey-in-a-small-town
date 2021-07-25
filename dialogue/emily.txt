@@ -75,9 +75,60 @@ Nice talking to you, I guess I can spare a few minutes over a lifetime after all
 
 # 0
 
-Wait, you're telling me that a century-long survey only takes a couple hours from your point of view?
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+Wha- ...oh. We're still doing this? Almost thought it was over already. I have to ask now - is this something like a meta experiment?
+You look like you haven't aged at all, is this an elaborate trick?
+
+- As you surely have noticed, the ongoing development of time-travelling devices has now permitted external researchers to be aided in cutting-edge technologies. As such, St. Mariana has adopted them as a tool to aid in market research.
+
+Wait, you're telling me that a century-long survey only takes a couple hours from your point of view? This is your [i]average[/i] work day?
 Do you have [i]any[/i] idea what you're doing? How it affects us?
 
+- How are you?
+
+Ah, I'm getting worried. Since Mary died a couple of years ago, a rift has started to open. Nelly talked about how it's caused by the town losing its people.
+I'm worried about her.
+
+|,emilyChoice1,Aren't you alarmed?,Have you changed?
+
+= emilyChoice1
+What? Yes, I'm getting more alarmed by the day - and now you show up again? You're just making everything worse.
+=
+Not for the better.
+
+/ RATE -15 0
+- What's your opinion on the Rift?
+
+There's no opinion to be had. Do you ask people for opinions on earthquakes? I'll stay here.
+
+- What were your thoughts when the survey first started?
+
+I didn't think it was too bad - I thought the surveys were over and the benefits were good. When you started visiting, it wasn't too bad either.
+What I didn't anticipate was how destructive you are.
+
+|,emilyChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
+
+= emilyChoice2
+Oh please, you don't have to be condescending about it. 
+=
+Maybe. I've looked at other options, while Nelly wants to stay here. And I don't want to lose her to this town alone.
+
+/ RATE -5 0
+- Why didn't you tell friends and family about the product?
+
+Are you surveying my family too? What the hell? Of course I didn't, not to a bunch of creeps.
+
+- This concludes the third round of interviews. Thank you for your participation. We hope to meet you again soon.
+
+Hm-hmm.
+
 # 5
+
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+- This concludes the fourth round of interviews. Thank you for your participation. We hope to meet you again soon.
+
+I hope not.
 
 # 20

@@ -1,7 +1,7 @@
 extends Node
 
 enum Person {Mary, Alison, Emily, Alex, Nelly}
-const TEXT_SPEED = 2.0
+const TEXT_SPEED = 5.0
 
 const ORDER = [2, 1, 3, 4, 0, 5]
 const TIME_CONFIG = [
@@ -53,7 +53,7 @@ var choices = {}
 var picked = []
 
 var timelines = 6
-var current_step = 4
+var current_step = 1
 var current_time setget ,get_current_time
 var current_config setget ,get_current_config
 var productivity = 50

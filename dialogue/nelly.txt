@@ -79,6 +79,46 @@ What?
 
 # 0
 
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+I wondered when you'd come back. But I was certain you would.
+
+- How are you?
+
+I'm fine. I know what you're doing.
+
+|,nellyChoice1,Aren't you alarmed?,Have you changed?
+
+= nellyChoice1
+Should I be? I know the town and us are going down the drain, maybe it's because of you. You're not giving us a lot of confidence.
+=
+We all have grown a lot closer together, now that we're almost extinct.
+
+/ RATE -15 0
+- What's your opinion on the Rift?
+
+My mother told me I shouldn't worry about it.
+
+- What were your thoughts when the survey first started?
+
+There weren't many and they probably weren't too relevant at the time, as you interviewed a literal toddler. My mother 
+
+|,nellyChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
+
+= nellyChoice2
+Are you taunting me?
+=
+My mother and Emily really want to leave with me, but I'm not sure I can. What happens when nobody is left anymore?
+
+/ RATE -5 0
+- Why didn't you tell friends and family about the product?
+
+Oh sure, Alex and Emily would love to hear more about it.
+
+- This concludes the third round of interviews. Thank you for your participation. We hope to meet you again soon.
+
+I would love if you didn't.
+
 # 5
 
 # 20
@@ -87,11 +127,25 @@ What?
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
+I wondered when you'd come back. But I was certain you would.
+
 - What were your thoughts when the survey started?
+
+As soon as you arrived here, everyone had the hunch of the Rift being inevitable. Alison told me how she shuddered when knocked.
+Alex has been terrified ever since. Emily went to a dark place and never came back. 
 
 -------Introduce this (or another) question more and more until it's the only option (or both options, rather)
 -------And you get unlimited productivity
 -------Once productivity reaches 1000% or sth...
 
-- Thank you. This was the last interview.
+/ RATE 0 100
+- Why won't you die?
+
+/ RATE 0 500
+- Why won't you die?
+
+/ RATE 0 1000
+- Why won't you die?
+
+- This concludes the last round of interviews. Thank you for your participation. We will not meet again.
 - This concludes our survey in this town.

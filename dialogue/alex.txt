@@ -44,14 +44,17 @@ Huh? It's on the modern side, but not that it's out of place. Probably something
 Oh. Oh, wow. Didn't think you'd get back here.
 
 = -25nellyVisitedBeforeAlex
-Nelly told me you already visited her? WHY? Please, just can't you go away? What are you doing?
-=
 Come in, quickly before Nelly sees you. Why did you even talk to her last time?
 At least she doesn't remember you.
+=
+Nelly told me you already visited her? WHY? Please, just can't you go away? What are you doing?
 
 - How are you?
 
+= -25nellyVisitedBeforeAlex
 Alright. The mood is down a bit since Alison left - I hope you didn't leave a super negative impression with her. She didn't speak fondly of you.
+=
+Worse since you arrived. Do you have no empathy? Do you just read everything off your script?
 
 - Have you read the information booklet?
 
@@ -64,7 +67,7 @@ I hope not.
 - What is your typical day like?
 
 I took up my work at the pharmacy again, so it's that for the first half of the day and then it's your usual household routine.
-I used to chat with Alison in the evenings. I could call her, or drive to her care home, but it doesn't feel right - like the conversations were always meant to be short, at a transient space.
+I used to chat with Alison in the evenings. I could call her, or drive to her care home, but it doesn't feel right - like the conversations were always meant to be transient.
 
 - What are your current worries?
 
@@ -80,4 +83,50 @@ Eh...
 
 # 0
 
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
+Please go away.
+
+- You are contractually obliged to partake in the interviews.
+
+Then I'm consciously obliged to give you rubbish data.
+
+- How are you?
+
+Take a guess.
+
+- You have to answer the question. How are you?
+
+I've been anxious for all these years for you to arrive again, and now that you're here I'm almost relaxed.
+
+|,alexChoice1,Aren't you alarmed?,Have you changed?
+
+= alexChoice1
+What kind of question is this? So you [i]are[/i] aware of the damage you're doing?
+=
+I've grown weary.
+
+/ RATE -15 0
+- What's your opinion on the Rift?
+
+It's not looking good. It coincided with Mary's passing. If you manage to scare more people away, I'm sure it will overgrow.
+
+- What were your thoughts when the survey first started?
+
+I feared it, and I was right. With the surveys eventually stopping, I thought it was a good place to raise Nelly, but I was wrong. You came back.
+
+|,alexChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
+
+= alexChoice2
+I would, if I could. I thought I could protect Nelly from you, but I couldn't. And I don't want to risk tearing the Rift deeper. It seems to grow when fewer people are there.
+=
+I do. This town is devouring people. At least nobody is moving here, like they used to.
+
+/ RATE -5 0
+- Why didn't you tell friends and family about the product?
+
+Are you again trying to shame me?
+
+- This concludes the third round of interviews. Thank you for your participation. We hope to meet you again soon.
+
+Leave and never come back. I won't be here on your next round.

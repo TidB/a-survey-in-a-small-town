@@ -33,6 +33,7 @@ func parse_dialogue(name):
 	
 	var current_time = null
 	var skip = false
+	var rate = []
 	var last_cond = null
 	var condition = []
 	for line in content.strip_edges().split("\n"):
@@ -40,6 +41,7 @@ func parse_dialogue(name):
 		if line.empty():
 			condition = []
 			skip = false
+			rate = []
 			last_cond = null
 		elif line.begins_with("#"):
 			current_time = line.split(" ")[1]
@@ -49,6 +51,9 @@ func parse_dialogue(name):
 				dialogue[current_time].append([Action.FADE])
 			elif action == "SKIP":
 				skip = true
+			elif action == "RATE":
+				var args = line.split(" ")
+				rate = [int(args[2]), int(args[3])]
 		elif line.begins_with("|"):
 			var args = line.split(",")
 			dialogue[current_time].append([Action.CHOICE, args[1], args[2], args[3]])
@@ -61,9 +66,13 @@ func parse_dialogue(name):
 				last_cond = args[1]
 		elif line.begins_with("-"):
 			var player_line = line.split(" ", true, 1)[1]
-			dialogue[current_time].append([Action.PLAYER, player_line, condition, skip])
+			dialogue[current_time].append([Action.PLAYER, player_line, condition, skip, rate])
+			skip = false
+			rate = []
 		else:
-			dialogue[current_time].append([Action.PERSON, line, condition, skip])
+			dialogue[current_time].append([Action.PERSON, line, condition, skip, rate])
+			skip = false
+			rate = []
 	
 	return dialogue
 
@@ -78,6 +87,11 @@ func play(dialogue):
 						continue
 				else:
 					print("Choice '", condition[0], "' not defined!")
+				
+			var rate = line[4]	
+			if rate:
+				happiness = clamp(happiness + rate[0], 0, 100)
+				Global.productivity = clamp(Global.productivity + rate[1], 0, 100)
 			
 			var box
 			var tween
@@ -103,6 +117,7 @@ func play(dialogue):
 			
 			tween.interpolate_method(box, "set_percent_visible", 1.0, 0.0, 0.1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 			tween.start()
+			yield(tween, "tween_completed")
 		elif line[0] == Action.CHOICE:
 			current_choice = line[1]
 			
