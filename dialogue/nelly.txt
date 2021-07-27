@@ -83,6 +83,8 @@ What?
 
 I wondered when you'd come back. But I was certain you would.
 
+/ FADE
+
 - How are you?
 
 I'm fine. I know what you're doing.
@@ -124,6 +126,8 @@ I would love if you didn't.
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
 A-ha, you are picking up the pace now? I'm afraid it won't do much for you at this point. Do you think that two people entrenched in their opinions about you will give valuable data?
+
+/ FADE
 
 / RATE -5 5
 - How are you?
@@ -175,6 +179,8 @@ See you.
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
+/ FADE
+
 - What's your opinion on the Rift?
 
 |,nellyChoice6,Is this the end?,What are your current worries?
@@ -185,13 +191,15 @@ See you.
 
 |,nellyChoice9,Will you make it?,What do you find innovative about the product?
 
-- A show wind is creeping across the land. Can you outrun it?
+- A slow wind is creeping across the land. Can you outrun it?
 
 - This concludes the fifth round of interviews. Thank you for your participation. We hope to meet you again soon.
 
 # 60
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+/ FADE
 
 I wondered when you'd come back. But I was certain you would.
 

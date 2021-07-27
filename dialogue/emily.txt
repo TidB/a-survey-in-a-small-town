@@ -43,6 +43,8 @@ Yeah sure. Hopefully not during the exam period because you'll get even shorter 
 
 Oooh hey, it's you again. You... look exactly the same, that's cool.
 
+/ FADE
+
 - How are you?
 
 I'm fine. 
@@ -85,6 +87,8 @@ You look like you haven't aged at all, is this an elaborate trick?
 
 Wait, you're telling me that a century-long survey only takes a couple hours from your point of view? This is your [i]average[/i] work day?
 Do you have [i]any[/i] idea what you're doing? How it affects us?
+
+/ FADE
 
 - How are you?
 
@@ -129,6 +133,8 @@ Hm-hmm.
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
 Oh no, already? You're speeding up [i]now[/i] of all times? You should've done that when people were still living here and you couldn't scare them away that quickly.
+
+/ FADE
 
 / RATE -5 5
 - How are you?
@@ -182,17 +188,48 @@ I hope not.
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
+Hm. I almost wish you sticked to the faster schedule instead.
+
+/ FADE
+
 - What's your opinion on the Rift?
 
-|,nellyChoice6,Is this the end?,What are your current worries?
+It's frighteningly big now, it's almost making me sick. I sometimes catch myself staring at it for an hour. The Wind got stronger as well, it's colder and darker than anything else I've felt before. 
 
-|,nellyChoice7,Are you alone?,How much would you be willing to spend on the product?
+|,emilyChoice6,Is this the end?,What are your current worries?
 
-|,nellyChoice8,Would you like to sign up for an upcoming survey?,Does the product fit into this time?
+= emilyChoice6
+I'm pretty sure you know the answer to this already. That's what the survey is about, isn't it? You can tell me now, but you won't.
+I don't think this is the end. Nelly is too strong.
+=
+There's not much left to worry about. Just us and the town.
 
-|,nellyChoice9,Will you make it?,What do you find innovative about the product?
+|,emilyChoice7,Are you alone?,How much would you be willing to spend on the product?
 
-- A show wind is creeping across the land. Can you outrun it?
+= emilyChoice7
+Oh, you could've asked that in a nicer way! Nelly and I are still together here!
+=
+Nothing. You should give the customers money for spending time on this.
+
+|,emilyChoice8,Would you like to sign up for an upcoming survey?,Does the product fit into this time?
+
+= emilyChoice8
+Oh, you're getting sassy. I would never agree with that. And I know that because I can't remember any other time-travelling surveys in the past, haha!
+=
+Was this question just a distraction the whole time? Why do you ask this at points decades apart, while trends come and go very quickly. And this doesn't fit.
+I think you missed the point entirely, but by now... I think you know why you're asking it, and when.
+
+|,emilyChoice9,Will you make it?,What do you find innovative about the product?
+
+= emilyChoice9
+Oh, I will. Don't you worry.
+=
+This survey. I have never seen a grander example of exceptional technology used for - well, monetary profit. You're not interested in changing the world, are you?
+You're interested in not changing the world too much. To preserve the continuity of time.
+
+- A slow wind is creeping across the land. Can you outrun it?
+
+Oh I can't, but I don't need to. But I'm happy to hear that you feel it as well. May you feel it forever.
 
 - This concludes the fifth round of interviews. Thank you for your participation. We hope to meet you again soon.
 
