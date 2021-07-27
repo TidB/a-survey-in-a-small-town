@@ -30,7 +30,7 @@ const TIME_CONFIG = [
 	{
 		'offset': 5,
 		'name': '5 years in the future',
-		'avail': [Person.Emily, Person.Nelly],
+		'avail': [Person.Alex, Person.Emily, Person.Nelly],
 		'rift': ['Medium'],
 		'wind': [2500, -10, 3],
 	},

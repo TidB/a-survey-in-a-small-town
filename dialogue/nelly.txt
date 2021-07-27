@@ -121,9 +121,73 @@ I would love if you didn't.
 
 # 5
 
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
+A-ha, you are picking up the pace now? I'm afraid it won't do much for you at this point. Do you think that two people entrenched in their opinions about you will give valuable data?
+
+/ RATE -5 5
+- How are you?
+
+I've been better, but that is true for all of us now, isn't it? Even my mother moved away now.
+She couldn't bear living here anymore, it festered so much that she left without us.
+
+|,nellyChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe, which would you pick?
+
+= nellyChoice3
+You will not be surprised that so far, your survey has been disastrous for us and for this town.
+=
+I like this one. Mary left me something like a self-made weather station in her inheritance. It's solar-powered!
+Alex recently gave me one of her old notebooks, full of sketches! She documented a lot of the plant life and rock formations in the area.
+And lastly... I would pick a book Alison gave me before she moved away. It is called 'The Dome-Maker's Handbook'.
+You might see a pattern there. I'm holding onto anything.
+
+|,nellyChoice4,Why did you choose us?,What is the first thing you would buy after winning the lottery?
+
+= nellyChoice4
+We didn't choose you. You chose us, for a reason I don't know yet. We will, I'll make sure of it.
+=
+...
+I would love to move. And help the others moving as well, but I feel that it's not possible, that we have to hold on here forever. I fear what the Rift holds.
+Maybe I'd bribe your company to make better surveys and prevent this mess.
+
+- What would you sacrifice for the product?
+
+What are you trying to do? It is obvious that the product does nothing. That it is intended to do nothing.
+Now I know why you asked those peculiar questions in the beginning - you want those products to be effectively irrelevant.
+
+|,nellyChoice5,You continue trying despite having no future. Why?,Who are you?
+
+= nellyChoice5
+Oh, so you have decided that already? I am glad you are finally showing your true colors.
+I'll continue trying to hold the Rift back. Maybe that's what you're after.
+=
+You know me.
+
+- Are you glad this interview is over?
+
+Only a bit. I enjoy learning from you as well, as you're slowly revealing who you are.
+
+- This concludes the fourth round of interviews. Thank you for your participation. We hope to meet you again soon.
+
+See you.
 
 # 20
+
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+- What's your opinion on the Rift?
+
+|,nellyChoice6,Is this the end?,What are your current worries?
+
+|,nellyChoice7,Are you alone?,How much would you be willing to spend on the product?
+
+|,nellyChoice8,Would you like to sign up for an upcoming survey?,Does the product fit into this time?
+
+|,nellyChoice9,Will you make it?,What do you find innovative about the product?
+
+- A show wind is creeping across the land. Can you outrun it?
+
+- This concludes the fifth round of interviews. Thank you for your participation. We hope to meet you again soon.
 
 # 60
 
@@ -131,23 +195,25 @@ I would love if you didn't.
 
 I wondered when you'd come back. But I was certain you would.
 
+|,nellyChoice10,You continue trying despite having no future. Why?,How are you?
+
+|,nellyChoice11,Why do you have no friends?,Have you read the information booklet?
+
+|,nellyChoice12,Is this the end,Would you tell friends and family about the product?
+
+|,nellyChoice13,When will you cry?,Do you think that the product will substantially alter your future?
+
+|,nellyChoice14,Have you thought about killing someone?,What is your typical day like?
+
+|,nellyChoice15,Why aren't you dying?,Does the product fit into this time?
+
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
+
 - What were your thoughts when the survey started?
 
-As soon as you arrived here, everyone had the hunch of the Rift being inevitable. Alison told me how she shuddered when knocked.
+As soon as you arrived here, everyone had the hunch that the Rift was inevitable. Alison told me how she shuddered when knocked.
 Alex has been terrified ever since. Emily went to a dark place and never came back. 
 
--------Introduce this (or another) question more and more until it's the only option (or both options, rather)
--------And you get unlimited productivity
--------Once productivity reaches 1000% or sth...
-
-/ RATE 0 100
-- Why won't you die?
-
-/ RATE 0 500
-- Why won't you die?
-
-/ RATE 0 1000
-- Why won't you die?
-
+TODO: This on a totally black screen?
 - This concludes the last round of interviews. Thank you for your participation. We will not meet again.
 - This concludes our survey in this town.

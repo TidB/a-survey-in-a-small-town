@@ -85,7 +85,7 @@ Eh...
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
-Please go away.
+Oh no.
 
 - You are contractually obliged to partake in the interviews.
 
@@ -126,7 +126,55 @@ I do. This town is devouring people. At least nobody is moving here, like they u
 - Why didn't you tell friends and family about the product?
 
 Are you again trying to shame me?
+- You have to answer the question.
+Absolutely no reason to tell anyone about it.
 
 - This concludes the third round of interviews. Thank you for your participation. We hope to meet you again soon.
+
+Sure. I need to talk with Nelly.
+
+# 5
+
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+[i]This[/i] early again? Oh well, you managed to catch me another time after all.
+
+/ RATE -5 5
+- How are you?
+
+Worse than before, but at least it didn't happen as much as last time. The folks are still here, the Rift grew only a tiny amount.
+
+|,alexChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe, which would you pick?
+
+= alexChoice3
+Is this a joke? This is the only survey I have ever been part of, and it has been the absolute worst.
+=
+Oh, there isn't much I have here anyway. I like this rocking chair - I sound really old when I say that - and my current fountain pen. Oh, that sounds even older.
+The third one would probably be a deck of cards I have owned for decades by now. Oh, so many memories of evenings in our small group in the living room.
+
+|,alexChoice4,Why did you choose us?,What is the first thing you would buy after winning the lottery?
+
+= alexChoice4
+Did we? I mean kind of, since we live here, but what kind of answer do you expect? Or did you write this question with a competition of more surveys in mind?
+=
+Get away from here? Does this answer count? I mean we're leaving anyway, but the money would certainly help with that.
+
+- What would you sacrifice for the product?
+
+You're not making much sense to me, I'm afraid. Nothing is the best I can come up with, but you seem to expect that already.
+You're successful in making the most irrelevant product in history, so I can only guess it is some kind of strategy.
+
+|,alexChoice5,You continue trying despite having no future. Why?,Who are you?
+
+= alexChoice5
+Oh, does it look like I'm trying? Does it look like I'm trying to hang on here? Just barely.
+=
+I'm Alex, and soon I'm somewhere else.
+
+- Are you glad this interview is over?
+
+Not at all. I would have found it okay if you stuck with the longer pauses between interviews.
+
+- This concludes the fourth round of interviews. Thank you for your participation. We hope to meet you again soon.
 
 Leave and never come back. I won't be here on your next round.

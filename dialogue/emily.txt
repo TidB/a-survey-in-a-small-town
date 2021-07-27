@@ -9,7 +9,7 @@ I hope this won't take too long? Kinda busy with uni work right now...
 
 - How are you?
 
-I'm fine.
+I'm fine, I guess. Moved here only a couple of weeks ago, so I'm still settling in.
 
 - Have you read the information booklet?
 
@@ -21,11 +21,12 @@ Yeah, no. The only people recommending those things to each other are fourty-yea
 
 - Do you think that the product will substantially alter your future?
 
-I hope not.
+I hope not. I have a very rough plan of what I wanna do, and wouldn't like changing it now.
+But it really doesn't seem interesting - sorry - so I'm not worrying about it.
 
 - What is your typical day like?
 
-Learning. At least the benefits are good enough here so I don't have to wait tables.
+Learning. At least the benefits in this town are good enough here so I don't have to wait tables, studying Maths is hard enough already.
 
 - Does the product fit into this time?
 
@@ -112,7 +113,7 @@ What I didn't anticipate was how destructive you are.
 = emilyChoice2
 Oh please, you don't have to be condescending about it. 
 =
-Maybe. I've looked at other options, while Nelly wants to stay here. And I don't want to lose her to this town alone.
+Maybe. I've looked at other options, while Nelly wants to stay here. And I don't want to lose her to this town.
 
 / RATE -5 0
 - Why didn't you tell friends and family about the product?
@@ -127,8 +128,72 @@ Hm-hmm.
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
+Oh no, already? You're speeding up [i]now[/i] of all times? You should've done that when people were still living here and you couldn't scare them away that quickly.
+
+/ RATE -5 5
+- How are you?
+
+The Rift seems to have stabilized for now, I guess because nobody left in the meantime. The Wind is growing stronger now.
+Sometimes, I don't want to go buy groceries. It feels like I'm giving the Rift an opportunity to grow again.
+
+|,emilyChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe, which would you pick?
+
+= emilyChoice3
+That is a [i]bold[/i] question. Wow. Do you have 'Caused half the town to die or leave' as an option?
+- Please answer the question.
+I don't like it. Zero out of ten.
+=
+Is this another warning? Anyway, I'd pick my guitar, my diploma and... hm, I'm not sure. Despite all this, maybe a map of this town.
+When I moved in, they gave me some maps and documents and whatnot, and among those was a map of... better times, I assume. 
+
+|,emilyChoice4,Why did you choose us?,What is the first thing you would buy after winning the lottery?
+
+= emilyChoice4
+Haha! Wow, it's getting better and better. Or worse and worse. Your pick. To answer your question, nobody chose you.
+You came here by yourselves, why don't you ask your boss?
+=
+A house in another town.
+
+/ RATE -5 0
+- What would you sacrifice for the product?
+
+= emilyChoice4
+Yeah, it [i]is[/i] getting worse and worse.
+=
+
+I don't think I'd sacrifice anything beyond catching it when it's thrown around for free at some point.
+
+|,emilyChoice5,You continue trying despite having no future. Why?,Who are you?
+
+= emilyChoice5
+What?
+=
+I'm... Emily? Sorry if you hoped for an introspective moody answer, I don't give those.
+
+- Are you glad this interview is over?
+
+I sure am, but it'll just be replaced by the worry of when you'll come back.
+
 - This concludes the fourth round of interviews. Thank you for your participation. We hope to meet you again soon.
 
 I hope not.
 
 # 20
+
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+- What's your opinion on the Rift?
+
+|,nellyChoice6,Is this the end?,What are your current worries?
+
+|,nellyChoice7,Are you alone?,How much would you be willing to spend on the product?
+
+|,nellyChoice8,Would you like to sign up for an upcoming survey?,Does the product fit into this time?
+
+|,nellyChoice9,Will you make it?,What do you find innovative about the product?
+
+- A show wind is creeping across the land. Can you outrun it?
+
+- This concludes the fifth round of interviews. Thank you for your participation. We hope to meet you again soon.
+
+Please die.
