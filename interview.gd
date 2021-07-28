@@ -23,7 +23,7 @@ func _ready():
 	
 func parse_dialogue(name):
 	var file = File.new()
-	file.open("res://dialogue/" + name + ".txt", File.READ)
+	file.open("res://dialogue/" + name.to_lower() + ".txt", File.READ)
 	var content = file.get_as_text()
 	file.close()
 	

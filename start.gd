@@ -17,7 +17,7 @@ func update_time(value):
 	update_wind(value)
 	
 func update_label(value):
-	$Timeline/Label.text = Global.current_config['name'].to_upper()
+	$Label.text = Global.current_config['name'].to_upper()
 		
 func update_bg(value):
 	$TownCutout.color = Global.get_bg_color()

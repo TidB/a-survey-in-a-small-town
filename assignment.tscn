@@ -63,7 +63,7 @@ General guidelines:
 - Have fun ;)
 
 
-You can do it, we believe in you!"
+You can totally do it!!!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -130,8 +130,9 @@ margin_bottom = 864.0
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "
-- Aww, the interviewees were sad :(
-- Your productivity was low, so for the next round we have to restrict your choices a bit ;)"
+TODO
+
+: -----)"
 __meta__ = {
 "_edit_use_anchors_": false
 }

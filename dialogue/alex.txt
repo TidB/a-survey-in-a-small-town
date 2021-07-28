@@ -146,7 +146,7 @@ Sure. I need to talk with Nelly.
 
 Worse than before, but at least it didn't happen as much as last time. The folks are still here, the Rift grew only a tiny amount.
 
-|,alexChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe, which would you pick?
+|,alexChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe: which would you pick?
 
 = alexChoice3
 Is this a joke? This is the only survey I have ever been part of, and it has been the absolute worst.

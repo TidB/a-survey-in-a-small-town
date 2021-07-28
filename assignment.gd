@@ -17,6 +17,7 @@ func set_survey():
 	$evaluation.visible = false
 	
 func set_assignment():
+	$assignment/RichTextLabel.text = Global.current_config["asgmt"]
 	$survey.visible = true
 	$survey/bg.color = Color.darkgray
 	$assignment.visible = true

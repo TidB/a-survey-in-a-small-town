@@ -28,6 +28,10 @@ shader = ExtResource( 6 )
 shader_param/amount = 10.0
 shader_param/speed = 1.5
 
+[sub_resource type="DynamicFont" id=8]
+size = 120
+font_data = ExtResource( 2 )
+
 [sub_resource type="Curve" id=5]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.144737, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
@@ -47,10 +51,6 @@ scale = 2.0
 scale_random = 0.24
 scale_curve = SubResource( 6 )
 color = Color( 0, 0, 0, 1 )
-
-[sub_resource type="DynamicFont" id=8]
-size = 120
-font_data = ExtResource( 2 )
 
 [sub_resource type="Shader" id=9]
 code = "shader_type canvas_item;
@@ -139,16 +139,7 @@ person = 3
 position = Vector2( 574, 701 )
 person = 4
 
-[node name="Particles2D" type="Particles2D" parent="."]
-position = Vector2( 960, 728 )
-amount = 20000
-lifetime = 4.0
-preprocess = 2.0
-process_material = SubResource( 7 )
-
-[node name="Timeline" type="Node2D" parent="."]
-
-[node name="Label" type="Label" parent="Timeline"]
+[node name="Label" type="Label" parent="."]
 material = ExtResource( 7 )
 margin_top = 96.0
 margin_right = 1920.0
@@ -158,6 +149,15 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( 960, 728 )
+amount = 20000
+lifetime = 4.0
+preprocess = 2.0
+process_material = SubResource( 7 )
+
+[node name="Timeline" type="Node2D" parent="."]
 
 [node name="Slider" type="Polygon2D" parent="Timeline"]
 material = SubResource( 10 )

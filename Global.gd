@@ -1,7 +1,7 @@
 extends Node
 
 enum Person {Mary, Alison, Emily, Alex, Nelly}
-const TEXT_SPEED = 5.0
+const TEXT_SPEED = 1.0
 enum ReportState {Survey, Assignment, Evaluation}
 
 const ORDER = [2, 1, 3, 4, 0, 5]
@@ -12,6 +12,7 @@ const TIME_CONFIG = [
 		'avail': [Person.Mary, Person.Alison, Person.Emily, Person.Alex, Person.Nelly],
 		'rift': [],
 		'wind': [0, 0, 0],
+		'asgmt': '\nRound 5: Timeline -40\n\nThis is technically the first interview, so no choices yet :)\n\nFind the questions in attachment 5-1.',
 	},
 	{
 		'offset': -25,
@@ -19,6 +20,7 @@ const TIME_CONFIG = [
 		'avail': [Person.Mary, Person.Alex, Person.Emily, Person.Nelly],
 		'rift': [],
 		'wind': [0, 0, 0],
+		'asgmt': '\nRound 2: Timeline -25\n\nThis is technically only their second interview, so no choices yet :)\n\nFind the questions in attachment 2-1.',
 	},
 	{
 		'offset': 0,
@@ -26,6 +28,7 @@ const TIME_CONFIG = [
 		'avail': [Person.Alex, Person.Emily, Person.Nelly],
 		'rift': ['Small'],
 		'wind': [1000, -5, 3],
+		'asgmt': '\nRound 1: Timeline ±0\n\nYou have a couple choices, use them wisely :)\n\nFind the questions in attachment 1-1.',
 	},
 	{
 		'offset': 5,
@@ -33,6 +36,7 @@ const TIME_CONFIG = [
 		'avail': [Person.Alex, Person.Emily, Person.Nelly],
 		'rift': ['Medium'],
 		'wind': [2500, -10, 3],
+		'asgmt': '\nRound 3: Timeline +5\n\nYou have a couple choices, use them wisely :)\n\nFind the questions in attachment 3-1.',
 	},
 	{
 		'offset': 20,
@@ -40,6 +44,7 @@ const TIME_CONFIG = [
 		'avail': [Person.Emily, Person.Nelly],
 		'rift': ['Large'],
 		'wind': [7500, -20, 3.1],
+		'asgmt': '\nRound 4: Timeline +20\n\nYou have a couple choices, use them wisely :)\n\nFind the questions in attachment 4-1.',
 	},
 	{
 		'offset': 60,
@@ -47,6 +52,7 @@ const TIME_CONFIG = [
 		'avail': [Person.Nelly],
 		'rift': ['Final', 'FinalBase'],
 		'wind': [20000, -20, 3.2],
+		'asgmt': '\nRound 6: Timeline +60\n\nWe almost did it!! You have a couple choices, use them wisely :)\n\nFind the questions in attachment 6-1.',
 	},
 ]
 
@@ -91,6 +97,8 @@ func interview_finished():
 
 func evaluation_finished():
 	if report_state == ReportState.Evaluation or report_state == ReportState.Survey:
+		if current_step == 3:
+			get_tree().quit()
 		report_state = ReportState.Assignment
 		get_tree().change_scene("res://assignment.tscn")
 	else: 

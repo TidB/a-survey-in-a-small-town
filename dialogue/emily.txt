@@ -83,7 +83,8 @@ Nice talking to you, I guess I can spare a few minutes over a lifetime after all
 Wha- ...oh. We're still doing this? Almost thought it was over already. I have to ask now - is this something like a meta experiment?
 You look like you haven't aged at all, is this an elaborate trick?
 
-- As you surely have noticed, the ongoing development of time-travelling devices has now permitted external researchers to be aided in cutting-edge technologies. As such, St. Mariana has adopted them as a tool to aid in market research.
+- As you surely have noticed, the ongoing development of time-travelling devices has now permitted external researchers to be aided in cutting-edge technologies.
+- As such, St. Mariana spearheads the current efforts of adopting them as the next revolution in market research.
 
 Wait, you're telling me that a century-long survey only takes a couple hours from your point of view? This is your [i]average[/i] work day?
 Do you have [i]any[/i] idea what you're doing? How it affects us?
@@ -142,7 +143,7 @@ Oh no, already? You're speeding up [i]now[/i] of all times? You should've done t
 The Rift seems to have stabilized for now, I guess because nobody left in the meantime. The Wind is growing stronger now.
 Sometimes, I don't want to go buy groceries. It feels like I'm giving the Rift an opportunity to grow again.
 
-|,emilyChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe, which would you pick?
+|,emilyChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe: which would you pick?
 
 = emilyChoice3
 That is a [i]bold[/i] question. Wow. Do you have 'Caused half the town to die or leave' as an option?

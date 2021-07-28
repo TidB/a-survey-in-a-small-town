@@ -103,7 +103,7 @@ My mother told me I shouldn't worry about it.
 
 - What were your thoughts when the survey first started?
 
-There weren't many and they probably weren't too relevant at the time, as you interviewed a literal toddler. My mother 
+There weren't many and they probably weren't too relevant at the time, as you interviewed a literal toddler. My mother didn't speak highly of you, and I wish I trusted her more on this.
 
 |,nellyChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
 
@@ -132,10 +132,10 @@ A-ha, you are picking up the pace now? I'm afraid it won't do much for you at th
 / RATE -5 5
 - How are you?
 
-I've been better, but that is true for all of us now, isn't it? Even my mother moved away now.
+I've been better, but that is true for all of us now, isn't it? Mom wants to move away more than ever before.
 She couldn't bear living here anymore, it festered so much that she left without us.
 
-|,nellyChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe, which would you pick?
+|,nellyChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe: which would you pick?
 
 = nellyChoice3
 You will not be surprised that so far, your survey has been disastrous for us and for this town.
