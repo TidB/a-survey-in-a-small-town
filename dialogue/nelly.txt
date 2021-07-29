@@ -179,25 +179,65 @@ See you.
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
+Who? -oh, it's you. You look exactly the same, and that makes you even harder to remember! I expect to see at least some gray hair by now.
+At the very least, you could put on a wig and some makeup, your company surely has the resources for that!
+Did you talk to Emily already? Please, please be more gentle. Alex moved away only a couple of months ago.
+
 / FADE
 
 - What's your opinion on the Rift?
 
+I'm... intrigued. I thought it might be a portal, but it seems to be just... nothing. I almost got caught by the edge when Alex left - it started expanding so quickly!
+You probably already saw that Alex left - again, please be careful with Emily.
+
 |,nellyChoice6,Is this the end?,What are your current worries?
+
+= nellyChoice6
+Oh no. I think you wish it was, but why? Why would you want this town ceasing to exist? That is what I'm asking myself now.
+=
+Fewer external people come around here to visit, and I cannot fault them - who would want to spend their time in a town with a pulsing wound?
+... who would spend their life in such a town...
 
 |,nellyChoice7,Are you alone?,How much would you be willing to spend on the product?
 
+= nellyChoice7
+I am not, and you know that. Emily is still with me here, and that's all I need. And all she needs.
+=
+I spent the majority of my life thinking about it, that is a price few have paid for anything.
+
 |,nellyChoice8,Would you like to sign up for an upcoming survey?,Does the product fit into this time?
+
+= nellyChoice8
+I would love to be part of another one, but I'm running out of time. I would guess you already have other surveys running at other towns. Are they falling apart like this one?
+You [i]want[/i] this town to disappear, it is clear. And I'll find out why.
+=
+You could sell it easily nowadays, I guess. For a low price, and I would assume that is your goal: to make unassuming products, but sell them in multiple times?
 
 |,nellyChoice9,Will you make it?,What do you find innovative about the product?
 
+= nellyChoice9
+I will absolutely make it. With or without you.
+=
+This is what you asked already, and what you know already. It's not innovative, it's not meant to be innovative, it's meant to be easily consumable by everyone, regardless of the time.
+
 - A slow wind is creeping across the land. Can you outrun it?
 
+I would not want to. It feels like a massive, huge, soothing breeze. Cold, but not freezing. Sometimes, I go out in the night and feel it on my skin, like a kid playing in the rain.
+Emily does not like it. She does not like the Rift. She does not like when I'm out to feel them. But she stays with me here because of me, and I'm eternally thankful for that.
+
 - This concludes the fifth round of interviews. Thank you for your participation. We hope to meet you again soon.
+
+I have the feeling that it won't be so soon for me...
 
 # 60
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+I'm sorry, can you repeat that?
+
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+Thank you, I just need to make sure. I felt it when you arrived here, when the darkness crept in. Oh, I'm so glad that Alex chose this as our home so long ago! We're barely at the edge of the Rift.
 
 / FADE
 
@@ -205,17 +245,51 @@ I wondered when you'd come back. But I was certain you would.
 
 |,nellyChoice10,You continue trying despite having no future. Why?,How are you?
 
+= nellyChoice10
+Oh, I'm not trying to live. I just live, despite your hardships. And don't you worry, I have made sure there is a future.
+Do you think Emily and I sat here for decades doing nothing? We have talked to people like us, living in the most average towns, having to participate in surveys.
+It will not be so easy for you anymore.
+=
+I'm fine, thank you for asking.
+
 |,nellyChoice11,Why do you have no friends?,Have you read the information booklet?
 
-|,nellyChoice12,Is this the end,Would you tell friends and family about the product?
+= nellyChoice11
+I wish I had some and I wish Emily was here. But it's not fair - she wasn't a friend, she was much more than that.
+=
+Oh, it's not in good shape anymore. The pages are wrinkled and yellowed, the pictures faded and dull.
+
+|,nellyChoice12,Is this the end?,Would you tell friends and family about the product?
+
+= nellyChoice12
+For you and me both, but in contrast to you, I made sure I have a legacy, something that changes - while you will just get new scripts and follow them forever.
+=
+Yes. I warned them, to be precise. It's already too late, I know. The product is being sold, but if we manage to stop the surveys it will do much more.
 
 |,nellyChoice13,When will you cry?,Do you think that the product will substantially alter your future?
 
+= nellyChoice13
+I cried a lot. When Alison left, when Mary died, when my mother left, when Emily went away. As my mother always said, crying clears the soul - oh Alex, my soul is as clear as day now.
+=
+If you see it as part of the surveys then sure ha-ha!
+
 |,nellyChoice14,Have you thought about killing someone?,What is your typical day like?
+
+= nellyChoice14
+Oh, what a rude question! Of course I did not! Emily certainly did think about it, not seriously though - it was more of a prolonged 'what if' thought.
+=
+I feel the edges of the Rift dancing across the ground, I feel the constant wind like the background noise of a busy highway. And I always see you.
 
 |,nellyChoice15,Why aren't you dying?,Does the product fit into this time?
 
+= nellyChoice15
+Hey! That is very offensive! Do you think I will give in now, after all that happened? After all we've sacrificed, after all we've achieved?
+=
+Oh it does, more than ever before. Just like you, it is concerned with everything else except the present.
+
 |,nellyLoop,Why aren't you dying?, Why aren't you dying?
+
+I won't.
 
 - What were your thoughts when the survey started?
 
@@ -224,4 +298,5 @@ Alex has been terrified ever since. Emily went to a dark place and never came ba
 
 TODO: This on a totally black screen?
 - This concludes the last round of interviews. Thank you for your participation. We will not meet again.
+
 - This concludes our survey in this town.

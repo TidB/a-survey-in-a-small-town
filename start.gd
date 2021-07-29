@@ -62,7 +62,7 @@ func _on_person_mouse_exited(person):
 	$Helper/Selection.text = ""
 	
 func _on_person_mouse_clicked(person):
-	if len(Global.picked) > 0 and person.name() == "Alex" and Global.picked[-1] == "Nelly":
+	if Global.current_time == -25 and len(Global.picked) > 0 and person.name() == "Alex" and Global.picked[-1] == "Nelly":
 		Global.choices["-25nellyVisitedBeforeAlex"] = 1
 	Global.picked.append(person.name())
 	

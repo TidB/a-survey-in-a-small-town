@@ -60,7 +60,7 @@ var choices = {}
 var picked = []
 
 var timelines = 6
-var current_step = 0
+var current_step = 5
 var current_time setget ,get_current_time
 var current_config setget ,get_current_config
 var report_state = ReportState.Survey
@@ -97,8 +97,6 @@ func interview_finished():
 
 func evaluation_finished():
 	if report_state == ReportState.Evaluation or report_state == ReportState.Survey:
-		if current_step == 3:
-			get_tree().quit()
 		report_state = ReportState.Assignment
 		get_tree().change_scene("res://assignment.tscn")
 	else: 
