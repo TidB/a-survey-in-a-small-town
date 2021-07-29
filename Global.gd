@@ -1,7 +1,8 @@
 extends Node
 
 enum Person {Mary, Alison, Emily, Alex, Nelly}
-const TEXT_SPEED = 1.0
+var AUTO_ADVANCE = false
+var TEXT_SPEED = 1.0
 enum ReportState {Survey, Assignment, Evaluation}
 
 const ORDER = [2, 1, 3, 4, 0, 5]

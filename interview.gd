@@ -1,11 +1,12 @@
 extends Node2D
 
-class Dialogue:
-	pass
+const MINIMUM_WAIT = 800
 	
 enum Action {PLAYER, PERSON, FADE, CHOICE}
 signal choice_picked
+signal advance
 
+var last_line
 var current_choice
 var timer
 var happiness = 100
@@ -101,19 +102,23 @@ func play(dialogue):
 			elif line[0] == Action.PERSON:
 				box = $PersonSpeech
 				tween = $TweenPerson
-				
-			tween.interpolate_method(box, "set_percent_visible", 0.0, 1.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			
+			last_line = OS.get_ticks_msec()
+			tween.interpolate_method(box, "set_percent_visible", 0.0, 1.0, 0.2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 			tween.start()
 
 			box.bbcode_text = line[1]
 			
-			var word_count = len(line[1].split(" "))
-			var reading_time = max(1.5, word_count / 225.0 * 60) / Global.TEXT_SPEED
-			if line[3]:
-				reading_time = 3
-			print(word_count, " words, equals ", reading_time, " seconds")
-			timer.start(reading_time)
-			yield(timer, "timeout")
+			if Global.AUTO_ADVANCE:
+				var word_count = len(line[1].split(" "))
+				var reading_time = max(1.5, word_count / 225.0 * 60) / Global.TEXT_SPEED
+				if line[3]:
+					reading_time = 3
+				print(word_count, " words, equals ", reading_time, " seconds")
+				timer.start(reading_time)
+				yield(timer, "timeout")
+			else:
+				yield(self, "advance")
 			
 			tween.interpolate_method(box, "set_percent_visible", 1.0, 0.0, 0.1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 			tween.start()
@@ -161,6 +166,13 @@ func _on_Choice1Bg_input_event(viewport, event, shape_idx):
 func _on_Choice2Bg_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		choice(1)
+		
+func _input(event):
+	if event.is_action_pressed("advance"):
+		if OS.get_ticks_msec() - last_line > MINIMUM_WAIT:
+			emit_signal("advance")
+		else:
+			print("minimum wait not yet over!")
 		
 func choice(num):
 	if num and Global.productivity <= 20:
