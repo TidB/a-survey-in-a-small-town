@@ -10,6 +10,10 @@ var last_line = OS.get_ticks_msec()
 var current_choice
 var timer
 var happiness
+var loop = 0
+var gradient = load("res://bg_gradient.tres").gradient
+var blink_timer
+var bright = true
 
 func _ready():
 	if Global.current_config["happy"]:
@@ -22,9 +26,12 @@ func _ready():
 	$Choice/Choice2Bg/CollisionPolygon2D.polygon = $Choice/Choice2Bg/Polygon2D.polygon
 	$PlayerSpeech.set_percent_visible(0)
 	$PersonSpeech.set_percent_visible(0)
-	update_values()
 	timer = Timer.new()
 	add_child(timer)
+	blink_timer = Timer.new()
+	blink_timer.connect("timeout", self, "_on_blink_timer_timeout")
+	add_child(blink_timer)
+	update_values()
 	var dialogue = parse_dialogue(Global.name(Global.interview_person))
 	play(dialogue)
 	
@@ -213,10 +220,27 @@ func choice(num):
 			current_choice = null
 	else:
 		Global.productivity = (Global.productivity + 50) * 3
+		
+		$Background.color = gradient.interpolate(1 - ((loop + 1) / 10.0))
+		loop += 1
 	
 	update_values()
 	emit_signal("choice_picked")
 
 func update_values():
 	$Values/HappyLabel.text = "%s's Happiness: %d%%" % [Global.name(Global.interview_person), happiness]
-	$Values/ProdLabel.text = "Your Productivity: %d%%" % Global.productivity
+	var p = "Your Productivity: %d%%" % Global.productivity
+	if loop > 3:
+		p += "!!!"
+	if blink_timer.is_stopped() and loop > 5:
+		blink_timer.start(0.1)
+	if loop > 6:
+		p += " :D"
+	$Values/ProdLabel.text = p
+
+func _on_blink_timer_timeout():
+	if bright:
+		$Values/ProdLabel.add_color_override("font_color", Color(1, 1, 1))
+	else:
+		$Values/ProdLabel.add_color_override("font_color", Color(0.8, 0.8, 0.8))
+	bright = !bright

@@ -90,7 +90,7 @@ var happiness = {
 }
 
 var timelines = 6
-var current_step = 0
+var current_step = 5
 var current_time setget ,get_current_time
 var current_config setget ,get_current_config
 var report_state = ReportState.Survey
@@ -143,6 +143,7 @@ func evaluation_finished():
 		if report_state == ReportState.Evaluation:
 			current_step += 1
 			if current_step >= timelines:
+				Audio.play_sfx()
 				get_tree().change_scene("res://end.tscn")
 				return
 		report_state = ReportState.Assignment
