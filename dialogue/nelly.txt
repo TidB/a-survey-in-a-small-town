@@ -255,7 +255,54 @@ I have the feeling that it won't be so soon for me...
 
 # 60
 
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
+I'm sorry, can you repeat that?
+
+- Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
+
+Thank you, I just need to make sure. I felt it when you arrived here, when the darkness crept in. Oh, I'm so glad that Alex chose this as our home so long ago! We're barely at the edge of the Rift.
+
+/ FADE
+
+I wondered when you'd come back. But I was certain you would.
+
+|,nellyChoice10,You continue trying despite having no future. Why?,How are you?
+
+= nellyChoice10
+Oh, I'm not trying to live. I just live, despite your hardships. And don't you worry, I have made sure there is a future.
+Do you think Emily and I sat here for decades doing nothing? We have talked to people like us, living in the most average towns, having to participate in surveys.
+It will not be so easy for you anymore.
+=
+I'm fine, thank you for asking.
+
+|,nellyChoice11,Why do you have no friends?,Have you read the information booklet?
+
+= nellyChoice11
+I wish I had some and I wish Emily was here. But it's not fair - she wasn't a friend, she was much more than that.
+=
+Oh, it's not in good shape anymore. The pages are wrinkled and yellowed, the pictures faded and dull.
+
+|,nellyChoice12,Is this the end?,Would you tell friends and family about the product?
+
+= nellyChoice12
+For you and me both, but in contrast to you, I made sure I have a legacy, something that changes - while you will just get new scripts and follow them forever.
+=
+Yes. I warned them, to be precise. It's already too late, I know. The product is being sold, but if we manage to stop the surveys it will do much more.
+
+|,nellyChoice13,When will you cry?,Do you think that the product will substantially alter your future?
+
+= nellyChoice13
+I cried a lot. When Alison left, when Mary died, when my mother left, when Emily went away. As my mother always said, crying clears the soul - oh Alex, my soul is as clear as day now.
+=
+If you see it as part of the surveys then sure ha-ha!
+
+|,nellyChoice14,Have you thought about killing someone?,What is your typical day like?
+
+= nellyChoice14
+Oh, what a rude question! Of course I did not! Emily certainly did think about it, not seriously though - it was more of a prolonged 'what if' thought.
+=
+I feel the edges of the Rift dancing across the ground, I feel the constant wind like the background noise of a busy highway. And I always see you.
 
 |,nellyChoice15,Why aren't you dying?,Does the product fit into this time?
 
