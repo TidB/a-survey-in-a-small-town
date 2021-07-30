@@ -17,7 +17,7 @@ func set_survey():
 	$evaluation.visible = false
 	
 func set_assignment():
-	$assignment/RichTextLabel.text = Global.current_config["asgmt"]
+	$assignment/RichTextLabel.text = Global.current_config['asgmt']
 	$survey.visible = true
 	$survey/bg.color = Color.darkgray
 	$assignment.visible = true
@@ -25,6 +25,22 @@ func set_assignment():
 	$evaluation.visible = false
 	
 func set_evaluation():
+	var text = Global.current_config['eval'] + "\n\n"
+	
+	if Global.productivity <= 40:
+		Global.reset_cooldown()
+		text += "Your productivity was a tad low, so in the next few choices you'll have to pick the option that's better (for us) ;)"
+	else:
+		text += "Nice job keeping productivity high!! :D"
+	
+	text += "\n\n"
+	
+	if Global.average_happiness() <= 50:
+		text += "Aww, the interviewees were kinda sad :'("
+	else:
+		text += "Wow!! The interviewees were happy (enough)! Remember that this is not (y)our goal though ;)"
+	
+	$evaluation/RichTextLabel.text = text
 	$survey.visible = true
 	$survey/bg.color = Color.darkgray
 	$assignment.visible = true
@@ -33,5 +49,5 @@ func set_evaluation():
 	$evaluation/bg.color = Color.white
 
 func _on_Button_input_event(viewport, event, shape_idx):
-	if (event is InputEventMouseButton && event.pressed):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		Global.evaluation_finished()

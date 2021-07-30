@@ -31,7 +31,7 @@ func set_done(value):
 	$Polygon2D.color = Color.white if active else Color.darkgray
 
 func _on_person_input_event(viewport, event, shape_idx):
-	if (event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed and active):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed and active:
 		emit_signal("clicked", self)
 
 func name():

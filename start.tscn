@@ -28,17 +28,17 @@ shader = ExtResource( 6 )
 shader_param/amount = 10.0
 shader_param/speed = 1.5
 
-[sub_resource type="DynamicFont" id=8]
-size = 120
+[sub_resource type="DynamicFont" id=5]
+size = 140
 font_data = ExtResource( 2 )
 
-[sub_resource type="Curve" id=5]
+[sub_resource type="Curve" id=6]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.144737, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=6]
-curve = SubResource( 5 )
+[sub_resource type="CurveTexture" id=7]
+curve = SubResource( 6 )
 
-[sub_resource type="ParticlesMaterial" id=7]
+[sub_resource type="ParticlesMaterial" id=8]
 emission_shape = 2
 emission_box_extents = Vector3( 960, 750, 1 )
 flag_disable_z = true
@@ -49,7 +49,7 @@ radial_accel = -20.0
 radial_accel_random = 0.24
 scale = 2.0
 scale_random = 0.24
-scale_curve = SubResource( 6 )
+scale_curve = SubResource( 7 )
 color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="Shader" id=9]
@@ -141,10 +141,10 @@ person = 4
 
 [node name="Label" type="Label" parent="."]
 material = ExtResource( 7 )
-margin_top = 96.0
+margin_top = 88.0
 margin_right = 1920.0
-margin_bottom = 216.0
-custom_fonts/font = SubResource( 8 )
+margin_bottom = 228.0
+custom_fonts/font = SubResource( 5 )
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -152,10 +152,11 @@ __meta__ = {
 
 [node name="Particles2D" type="Particles2D" parent="."]
 position = Vector2( 960, 728 )
+emitting = false
 amount = 20000
 lifetime = 4.0
 preprocess = 2.0
-process_material = SubResource( 7 )
+process_material = SubResource( 8 )
 
 [node name="Timeline" type="Node2D" parent="."]
 

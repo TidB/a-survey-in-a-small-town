@@ -174,5 +174,9 @@ __meta__ = {
 color = Color( 0, 0, 0, 0 )
 polygon = PoolVector2Array( 0, 0, 0, 1080, 1920, 1080, 1920, 0 )
 
+[node name="FadePartial" type="Polygon2D" parent="."]
+color = Color( 0, 0, 0, 0 )
+polygon = PoolVector2Array( 0, 0, 0, 1080, 256, 1080, 256, 640, 1152, 640, 1152, 960, 256, 960, 256, 1080, 1920, 1080, 1920, 0 )
+
 [connection signal="input_event" from="Choice/Choice1Bg" to="." method="_on_Choice1Bg_input_event"]
 [connection signal="input_event" from="Choice/Choice2Bg" to="." method="_on_Choice2Bg_input_event"]

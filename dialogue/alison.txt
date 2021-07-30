@@ -15,7 +15,7 @@ Oh I'm fine, thanks for asking! How was your journey?
 - Have you read the information booklet?
 
 / SKIP
-Yes! The product is so adorable, my granddaughter would love it! You have to know, she used to play with [i]real[/i] toys during her early days, but then the electronics started propping up! I talked to her parents that they should go back to the good old toys but they did not want to - always saying that this is the future, and that it is important to learn to deal with electronics. Laughable, in my opinion. They are just getting addicted!
+Yes! The product is so adorable, my granddaughter would love it! You have to know, she used to play with [i]real[/i] toys during her early days, but then the electronics started propping up! I talked to her parents that they should go back to the good old toys but they did not want to - always saying that this is the future, and that it is important to learn to deal with electronics. Laughable, in my opinion. They are just getting addicted! They can only move around as long as their charging cable permits, ha-ha-ha! Every time I see them entering a new building, they're always on the lookout for outlets to plug their pixel devices in, ha! We might be the first to witness a new generation of eletricity-based based humans, ha-ha-ha-ha-ha!
 
 |,alisonCutOff1,[Push on],[Say nothing]
 
@@ -27,7 +27,17 @@ I have seen hundreds of young kids now requiring glasses for even the simplest t
 
 - Would you tell friends and family about the product?
 
-You know, maybe. Truth be told, this is a very common question and at this point, everyone is probably sick of me trying to tell them about a new thing being researched here!
+/ SKIP
+You know, maybe. Truth be told, this is a very common question and at this point, everyone is probably sick of me trying to tell them about a new thing being researched here! A couple of decades ago, maybe fourty years, there was a company that tried to introduce something called, oh no, did I forget...
+Give me a second...
+
+|,alisonCutoff2,[Push on],[Say nothing]
+
+= alisonCutoff2
+- We are sorry, but you need to keep your answers concise.
+Oh I would love for you to listen, you can get a lot of good feedback from me! The previous interviewers were very happy with my performance!
+=
+I remember now! The company name was a long abbreviation that I would never be able to recall and they were very rude! It seems they did not want to do any actual research, but instead wanted to hear what they already wrote down! Some people even tried avoiding their interviews, pretending they were sick or not at home, but the researchers were just ignoring all their concerns! And then, the just left and nobody ever heard anything about this company or its results ever again, a truly confusing sight!
 
 - Do you think that the product will substantially alter your future?
 
@@ -35,11 +45,10 @@ Ha, I'm afraid it's not [i]that[/i] adorable. I think that is not your intention
 / SKIP
 People think too much about the future anyway, it is the only time they live in. And then they say that we live in the past! That we are old and useless, just last week I got told by a youngster on a skateboard that my hair look [i]FUNNY[/i]! This is not the world I remember living in, where hairstyles are trends! Who can afford to go to the barber that often to catch up with the latest trend? Nobody! We should all start over and just get a good old bowl cut. The coherence is our strength!
 
-|,alisonCutOff2,[Push on],[Say nothing]
+|,alisonCutOff3,[Push on],[Say nothing]
 
-= alisonCutOff2
+= alisonCutOff3
 - Please keep your answers concise.
-- You need to keep your answers concise.
 Sorry.
 =
 Back when I was a child, when you were probably not even born, we lived in a very small apartment. But it did not matter to us, because it let us grew closer together and we spent the whole day playing outside anyway! And now, all the so-called 'trends' are supposed to be happening inside all their little devices? That is not playing together, that is staring at screens next to each other! Who would have expected humanity to take such a sharp nosedive?
@@ -51,9 +60,10 @@ I love this question! I used to get up at 05:00 to catch any parking violators, 
 / SKIP
 Anyway, I try to go on an afternoon walk every now and then, my doctor suggested this to me! I try to have dinner around the same time, but the books are often so good I read them well into the night! I can give you some of the novels I have, I have so many suggestions for you! Do you like stories set in small lovely towns? I have the Fergusson trilogy right there behind the counter, can you see it? I like how calming it is for my soul, better than any doctor ha ha!
 
-|,alisonCutOff3,[Push on],[Say nothing]
+|,alisonCutOff4,[Push on],[Say nothing]
 
-= alisonCutOff3
+= alisonCutOff4
+- You need to keep your answers concise.
 Yes, yes. You know, it has gone so quiet here lately. This town is not what it used to be.
 =
 But you young people are probably looking for some action! Here, see the big dark blue book on the first row? It's called 'The Knight Shadows in the Order of Theretrestia' and oh my, this book is a [i]journey[/i]! I spent a whole week reading this story and had to catch a break multiple times because my heart was racing because of the fight descriptions! Not my cup of tea, but you would surely enjoy it!
@@ -65,9 +75,9 @@ I find it a bit too modern for my taste - but everything in the electronics stor
 / SKIP
 Last time I went in there, they had these weird toasters with [i]FIVE[/i] slots, can you imagine that? Back in [i]my[/i] days, we didn't have these fancy things - we ate the bread raw! We could not spare the extra energy for it! Then again, it was the [i]good[/i] bread from the nearby farm, Mellingburg's. What a wonderful family, so lovely! We attended their wedding, they rented the biggest barn in the whole state! They were such a cute couple! Have you heard of them? Anyway, they made great bread, whole grain and not the cheap kind you see in the supermarkets! A real let down, I tell you! Too bad they had to close down when the inspectors came around, they have no idea what bread should taste like! It all is just a conspiracy of BIG GRAIN, and I am the only person to see it yet!
 
-|,alisonCutOff4,[Push on],[Say nothing]
+|,alisonCutOff5,[Push on],[Say nothing]
 
-= alisonCutOff4
+= alisonCutOff5
 - We can only accept concise answers.
 Please, just listen to me.
 =

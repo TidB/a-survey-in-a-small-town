@@ -85,17 +85,10 @@ Eh...
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
-Oh no.
-
-- You are contractually obliged to partake in the interviews.
-
-Then I'm consciously obliged to give you rubbish data.
+Oh, that was a long wait. I almost hoped - sorry - feared that you wouldn't come back.
+And why do you look still so young?! That's really unnerving.
 
 - How are you?
-
-Take a guess.
-
-- You have to answer the question. How are you?
 
 I've been anxious for all these years for you to arrive again, and now that you're here I'm almost relaxed.
 
@@ -109,18 +102,22 @@ I've grown weary.
 / RATE -15 0
 - What's your opinion on the Rift?
 
-It's not looking good. It coincided with Mary's passing. If you manage to scare more people away, I'm sure it will overgrow.
+It's not looking good. It coincided with Mary's passing. If you manage to scare more people away, I'm sure it will overgrow us!
+You can see that it's not good for your business either, right? Right?
 
 - What were your thoughts when the survey first started?
 
-I feared it, and I was right. With the surveys eventually stopping, I thought it was a good place to raise Nelly, but I was wrong. You came back.
+I feared it, and I was right. With the surveys eventually stopping, I thought it was a good place to raise Nelly thanks to all the benefits we still get here, but without the drawbacks of having the constant surveys.
+But I was wrong and you came back.
 
 |,alexChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
 
 = alexChoice2
-I would, if I could. I thought I could protect Nelly from you, but I couldn't. And I don't want to risk tearing the Rift deeper. It seems to grow when fewer people are there.
+Do you- Do you [i]want[/i] us to? I would, if I could. I thought I could protect Nelly from you, but I couldn't. And I don't want to risk tearing the Rift deeper. It seems to grow when fewer people are there.
 =
-I do. This town is devouring people. At least nobody is moving here, like they used to.
+I do. This town is devouring people. At least nobody is moving here, like they used to. It could all be so 
+
+Nelly has become more and more interested in the Rift, and I think she almost wants to stay here to see how it festers on the abandoned buildings. I hope she will come with me. And Emily too.
 
 / RATE -5 0
 - Why didn't you tell friends and family about the product?
@@ -139,10 +136,18 @@ Sure. I need to talk with Nelly.
 
 [i]This[/i] early again? Oh well, you managed to catch me another time after all.
 
+- You are contractually obliged to partake in the interviews.
+
+Then I'm consciously obliged to give you rubbish data.
+
 / FADE
 
 / RATE -5 5
 - How are you?
+
+Take a guess.
+
+- You have to answer the question. How are you?
 
 Worse than before, but at least it didn't happen as much as last time. The folks are still here, the Rift grew only a tiny amount.
 

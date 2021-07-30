@@ -9,26 +9,33 @@ ma?
 - How are you?
 
 ma?
+/ RATE 0 -5
 where ma?
+
 
 - Have you read the information booklet?
 
+/ RATE 0 -5
 i have book!
 
 - Would you tell friends and family about the product?
 
+/ RATE 0 -5
 ma?
 
 - Do you think that the product will substantially alter your future?
 
+/ RATE 0 -5
 pro- pro-...
 
 - What is your typical day like?
 
+/ RATE -5 -5
 mama food!
 
 - Does the product fit into this time?
 
+/ RATE -5 -5
 [uncontrolled wailing]
 
 - This concludes the first round of interviews. As mentioned in the booklet, we will conduct multiple surveys over the next decades with the same product.
@@ -40,37 +47,41 @@ mama food!
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
-Oh, mom told me about you guys. Can't you just make up some responses about how cool I find your stuff?
+Mariana Research? Mom told me about you guys. Can't you just make up some responses about how cool I find your stuff?
 
 - You are contractually obliged to answer all questions earnestly.
+
+Urgh, she said something about her contract extending to her children or something like that, so annoying. Come on in, I guess.
 
 / FADE
 
 - How are you?
 
 I'm okay. I saw that mom had that look on her face again, she doesn't like that I'm talking to you.
+She thought the surveys were over, that's why we moved here in the first place.
 
 - Have you read the information booklet?
 
-Yeah... maybe it'll make sense to me when I'm older.
+Yeah I checked it out a couple of times, but it's just boring. It's on the same level as the wall tattoos mom recently brought here... not the biggest fan to be honest.
 
 - Have you changed?
 
 What do you mean, changed since when?
 - Since the last interview.
-What last interview?
+What last interview? Mom said there was another one a couple years back, but I don't remember you interviewing me. Not that I missed it.
 
 - What is your typical day like?
 
-Uh, I go to school, then I do homework, play on the computer and then sleep. Had music class today, hated it. Analyzing sonatas for the seventieth time.
+Uh, I go to school, then I do homework, play on the computer and then sleep. Had music class today, hated it. Analyzing sonatas for the seventieth time. At least I'll be finishing that up soon, and then it's off to sweet sweet summer holidays.
 
 - What are your current worries?
 
-The geography exam is gonna be pretty hard. I studied so much for it, but the teacher's probably gonna ask for like 20 random capitals, nobody can do that! 
+Mostly short-term things at the moment - upcoming geography exam that nobody thinks they'll pass, my applications getting accepted at the universities, 
+It's alright though, that means I don't have any room to think about things way ahead in the future. That'll change soon enough anyway.
 
 - Does the product fit into this time?
 
-It looks good. Not sure how people would use it currently though. Mom wouldn't use it.
+It looks good, but that's about it. Not sure how people would use it currently though. Mom might be a fan of it though, hahaha! Seems like something she'd bring back randomly after shopping.
 
 - This concludes the second round of interviews. Thank you for your participation. We hope to meet you again soon.
 This [i]actually[/i] was the second round? When was the first one?
@@ -81,45 +92,46 @@ What?
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
-I wondered when you'd come back. But I was certain you would.
+Oh, hey! I wondered when you'd come back. But I was certain you would.
+You haven't changed at all! I probably switched my style about five times since the last interview.
 
 / FADE
 
 - How are you?
 
-I'm fine. I know what you're doing.
+I'm alright. 
 
 |,nellyChoice1,Aren't you alarmed?,Have you changed?
 
 = nellyChoice1
-Should I be? I know the town and us are going down the drain, maybe it's because of you. You're not giving us a lot of confidence.
+Should I be? I know the town and we are going down the drain, maybe it's because of you. You're not giving us a lot of confidence.
 =
 We all have grown a lot closer together, now that we're almost extinct.
 
-/ RATE -15 0
 - What's your opinion on the Rift?
 
-My mother told me I shouldn't worry about it.
+My mom told me I shouldn't worry about it and so I didn't. I actually got curious about it, got closer, tried throwing rocks in there. 
 
 - What were your thoughts when the survey first started?
 
-There weren't many and they probably weren't too relevant at the time, as you interviewed a literal toddler. My mother didn't speak highly of you, and I wish I trusted her more on this.
+There weren't many and they probably weren't too relevant at the time, as you interviewed a literal toddler. My mother didn't speak highly of you, and I didn't understand at the time.
 
 |,nellyChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
 
 = nellyChoice2
-Are you taunting me?
+Wait, do you want us to leave? Why would you want that? We're here for your research, but you already managed to scare off two people...
 =
 My mother and Emily really want to leave with me, but I'm not sure I can. What happens when nobody is left anymore?
 
 / RATE -5 0
 - Why didn't you tell friends and family about the product?
 
-Oh sure, Alex and Emily would love to hear more about it.
+Oh sure, Alex and Emily would love to hear more about it. Please, for your own sake, just keep it down. Tell your bosses what they wanna hear.
 
 - This concludes the third round of interviews. Thank you for your participation. We hope to meet you again soon.
 
-I would love if you didn't.
+I would love if you didn't, but I can't stop you.
+Yet.
 
 # 5
 
@@ -134,6 +146,7 @@ A-ha, you are picking up the pace now? I'm afraid it won't do much for you at th
 
 I've been better, but that is true for all of us now, isn't it? Mom wants to move away more than ever before.
 She couldn't bear living here anymore, it festered so much that she left without us.
+But honestly? I'm fine. I have a better idea of what you're doing now.
 
 |,nellyChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe: which would you pick?
 
@@ -284,6 +297,7 @@ I feel the edges of the Rift dancing across the ground, I feel the constant wind
 
 = nellyChoice15
 Hey! That is very offensive! Do you think I will give in now, after all that happened? After all we've sacrificed, after all we've achieved?
+It has done nothing good for anyone! Even for you, do you think that taking literally a hundred years to dismantle a town this small is efficient? Or 'productive', as you call it?
 =
 Oh it does, more than ever before. Just like you, it is concerned with everything else except the present.
 
@@ -296,7 +310,8 @@ I won't.
 As soon as you arrived here, everyone had the hunch that the Rift was inevitable. Alison told me how she shuddered when knocked.
 Alex has been terrified ever since. Emily went to a dark place and never came back. 
 
-TODO: This on a totally black screen?
+/ FADEPARTIAL
+
 - This concludes the last round of interviews. Thank you for your participation. We will not meet again.
 
 - This concludes our survey in this town.

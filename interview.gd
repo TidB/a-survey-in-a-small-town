@@ -1,21 +1,27 @@
 extends Node2D
 
-const MINIMUM_WAIT = 800
+const MINIMUM_WAIT = 700
 	
-enum Action {PLAYER, PERSON, FADE, CHOICE}
+enum Action {PLAYER, PERSON, FADE, FADEPARTIAL, CHOICE}
 signal choice_picked
 signal advance
 
 var last_line
 var current_choice
 var timer
-var happiness = 100
+var happiness
 
 func _ready():
+	if Global.current_config["happy"]:
+		happiness = Global.current_config["happy"][Global.interview_person]
+	else:
+		happiness = Global.happiness[Global.interview_person]
 	$person.person = Global.interview_person
 	$Background.color = Global.get_bg_color()
 	$Choice/Choice1Bg/CollisionPolygon2D.polygon = $Choice/Choice1Bg/Polygon2D.polygon
 	$Choice/Choice2Bg/CollisionPolygon2D.polygon = $Choice/Choice2Bg/Polygon2D.polygon
+	$PlayerSpeech.set_percent_visible(0)
+	$PersonSpeech.set_percent_visible(0)
 	update_values()
 	timer = Timer.new()
 	add_child(timer)
@@ -50,6 +56,8 @@ func parse_dialogue(name):
 			var action = line.split(" ")[1]
 			if action == "FADE":
 				dialogue[current_time].append([Action.FADE])
+			elif action == "FADEPARTIAL":
+				dialogue[current_time].append([Action.FADEPARTIAL])
 			elif action == "SKIP":
 				skip = true
 			elif action == "RATE":
@@ -93,6 +101,7 @@ func play(dialogue):
 			if rate:
 				happiness = clamp(happiness + rate[0], 0, 100)
 				Global.productivity = clamp(Global.productivity + rate[1], 0, 100)
+				update_values()
 			
 			var box
 			var tween
@@ -149,6 +158,11 @@ func play(dialogue):
 			
 			timer.start(1)
 			yield(timer, "timeout")
+		elif line[0] == Action.FADEPARTIAL:
+			$TweenFade.interpolate_property($FadePartial, "color", Color(0, 0, 0, 0), Color(0, 0, 0, 1), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			$TweenFade.start()
+			
+			yield($TweenFade, "tween_completed")
 	
 	$TweenFade.interpolate_property($Fade, "color", Color(0, 0, 0, 0), Color(0, 0, 0, 1), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	$TweenFade.start()
@@ -157,24 +171,27 @@ func play(dialogue):
 	
 	timer.start(1)
 	yield(timer, "timeout")
+	if not Global.current_config["happy"]:
+		Global.happiness[Global.interview_person] = happiness
 	Global.interview_finished()
 
 func _on_Choice1Bg_input_event(viewport, event, shape_idx):
-	if (event is InputEventMouseButton && event.pressed):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		choice(0)
 
 func _on_Choice2Bg_input_event(viewport, event, shape_idx):
-	if (event is InputEventMouseButton && event.pressed):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
 		choice(1)
 		
 func _input(event):
 	if event.is_action_pressed("advance"):
 		if OS.get_ticks_msec() - last_line > MINIMUM_WAIT:
 			emit_signal("advance")
-		else:
-			print("minimum wait not yet over!")
 		
 func choice(num):
+	if num and Global.current_cooldown > 0:
+		$Choice/Choice2.bbcode_text = "Sorry, you need to wait a couple of rounds before you can choose these again :("
+		return
 	if num and Global.productivity <= 20:
 		$Choice/Choice2.bbcode_text = "Your productivity is too low to choose this option ;)"
 		return
@@ -184,12 +201,15 @@ func choice(num):
 		happiness = clamp(happiness - 30, 0, 100)
 		Global.productivity = clamp(Global.productivity + 15, 0, 100)
 	else:
-		happiness = clamp(happiness + 30, 0, 100)
+		happiness = clamp(happiness + 20, 0, 100)
 		Global.productivity = clamp(Global.productivity - 30, 0, 100)
 	update_values()
+	Global.decrease_cooldown()
+
 	if current_choice:
 		Global.choices[current_choice] = num
 		current_choice = null
+	
 	emit_signal("choice_picked")
 
 func update_values():

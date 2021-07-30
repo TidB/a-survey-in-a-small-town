@@ -2,14 +2,20 @@
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and will conduct a product survey.
 
-Aw crap...
+Aw crap, I hope Alex didn't lie to me. She said the surveys were over...
 I hope this won't take too long? Kinda busy with uni work right now...
+
+RATE -5 0
+- Do not worry. The survey will only take a few hours or a few decades, depending on your point of view.
+
+Is that a joke? C'mon, let's get this over with.
 
 / FADE
 
 - How are you?
 
-I'm fine, I guess. Moved here only a couple of weeks ago, so I'm still settling in.
+I'm fine, I guess. Moved here only a couple of weeks ago, so I'm still settling in. I've been a bit reluctant about living in a small town since that means you gotta talk a lot to your neighbors and invite them over to dinner and whatever, but it's been fine so far.
+The folks are really nice here, so I don't miss the more anonymous cities that much. Except for the convenience of having to drive half an hour to get groceries, I guess.
 
 - Have you read the information booklet?
 
@@ -18,6 +24,7 @@ Kinda? I didn't really get it, this seems like a lot of effort for a pretty unin
 - Would you tell friends and family about the product?
 
 Yeah, no. The only people recommending those things to each other are fourty-year-old moms spending all their time at home.
+Whoops, I hope Alex didn't hear this.
 
 - Do you think that the product will substantially alter your future?
 
@@ -27,21 +34,24 @@ But it really doesn't seem interesting - sorry - so I'm not worrying about it.
 - What is your typical day like?
 
 Learning. At least the benefits in this town are good enough here so I don't have to wait tables, studying Maths is hard enough already.
+Speaking of benefits, I wonder why the government is still subsidizing this town when barely any surveys are made here. I guess it's just not been on their minds at all, and I like to keep it that way.
 
 - Does the product fit into this time?
 
 I like it. Maybe a bit too cool currently, it would attract attention I wouldn't want.
 
 - As mentioned in the booklet, we will conduct multiple surveys over the next decades with the same product.
+/ RATE -5 0
 - We hope to meet you again soon.
 
-Yeah sure. Hopefully not during the exam period because you'll get even shorter answers.
+[i]Decades[/i]?! Jesus christ, alrighty then.
+Just not too soon please, if you do it during the exam period you'll get even shorter answers.
 
 # -25
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
-Oooh hey, it's you again. You... look exactly the same, that's cool.
+Mariner? Oooh hey, it's you again. You... look exactly the same, that's cool.
 
 / FADE
 
@@ -51,7 +61,8 @@ I'm fine.
 
 - Have you read the information booklet?
 
-I think I flipped through it on a very boring day, yes. 
+I think I flipped through it on a very boring day, yes. But in all honesty, what are you trying to do?
+There's no actual vision, not even something fancy marketing talk, 
 
 - Have you changed?
 
@@ -87,7 +98,7 @@ You look like you haven't aged at all, is this an elaborate trick?
 - As such, St. Mariana spearheads the current efforts of adopting them as the next revolution in market research.
 
 Wait, you're telling me that a century-long survey only takes a couple hours from your point of view? This is your [i]average[/i] work day?
-Do you have [i]any[/i] idea what you're doing? How it affects us?
+Do you have [i]any[/i] idea what you're doing? How it affects us? Urgh, why do researches always treat everything like lab rats? Why do the ytreat lab rats like lab rats?
 
 / FADE
 
