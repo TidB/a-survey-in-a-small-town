@@ -6,7 +6,7 @@ enum Action {PLAYER, PERSON, FADE, FADEPARTIAL, CHOICE}
 signal choice_picked
 signal advance
 
-var last_line
+var last_line = OS.get_ticks_msec()
 var current_choice
 var timer
 var happiness
@@ -96,6 +96,7 @@ func play(dialogue):
 						continue
 				else:
 					print("Choice '", condition[0], "' not defined!")
+					continue
 				
 			var rate = line[4]	
 			if rate:
@@ -147,6 +148,7 @@ func play(dialogue):
 			$PlayerSpeech.visible = true
 			$PlayerSpeechBg.visible = true
 			$Choice.visible = false
+
 		elif line[0] == Action.FADE:
 			$TweenFade.interpolate_property($Fade, "color", Color(0, 0, 0, 0), Color(0, 0, 0, 1), 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 			$TweenFade.start()
@@ -189,27 +191,30 @@ func _input(event):
 			emit_signal("advance")
 		
 func choice(num):
-	if num and Global.current_cooldown > 0:
-		$Choice/Choice2.bbcode_text = "Sorry, you need to wait a couple of rounds before you can choose these again :("
-		return
-	if num and Global.productivity <= 20:
-		$Choice/Choice2.bbcode_text = "Your productivity is too low to choose this option ;)"
-		return
-	
-	# 0 = bad, 1 = good. innovative & nuanced
-	if not num: 
-		happiness = clamp(happiness - 30, 0, 100)
-		Global.productivity = clamp(Global.productivity + 15, 0, 100)
+	if current_choice != 'nellyLoop':
+		if num and Global.current_cooldown > 0:
+			$Choice/Choice2.bbcode_text = "Sorry, you need to wait a couple of rounds before you can choose these again :("
+			return
+		if num and Global.productivity <= 20:
+			$Choice/Choice2.bbcode_text = "Your productivity is too low to choose this option ;)"
+			return
+		
+		# 0 = bad, 1 = good. innovative & nuanced
+		if not num: 
+			happiness = clamp(happiness - 30, 0, 100)
+			Global.productivity = clamp(Global.productivity + 15, 0, 100)
+		else:
+			happiness = clamp(happiness + 20, 0, 100)
+			Global.productivity = clamp(Global.productivity - 30, 0, 100)
+		Global.decrease_cooldown()
+		
+		if current_choice:
+			Global.choices[current_choice] = num
+			current_choice = null
 	else:
-		happiness = clamp(happiness + 20, 0, 100)
-		Global.productivity = clamp(Global.productivity - 30, 0, 100)
-	update_values()
-	Global.decrease_cooldown()
-
-	if current_choice:
-		Global.choices[current_choice] = num
-		current_choice = null
+		Global.productivity = (Global.productivity + 50) * 3
 	
+	update_values()
 	emit_signal("choice_picked")
 
 func update_values():

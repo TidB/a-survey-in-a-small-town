@@ -62,8 +62,10 @@ func _on_person_mouse_exited(person):
 	$Helper/Selection.text = ""
 	
 func _on_person_mouse_clicked(person):
-	if Global.current_time == -25 and len(Global.picked) > 0 and person.name() == "Alex" and Global.picked[-1] == "Nelly":
+	if person.name() == "Nelly" and not "Alex" in Global.picked:
 		Global.choices["-25nellyVisitedBeforeAlex"] = 1
+	elif person.name() == "Alex" and not "Nelly" in Global.picked:
+		Global.choices["-25nellyVisitedBeforeAlex"] = 0
 	Global.picked.append(person.name())
 	
 	Global.switch_to_interview(person.person)

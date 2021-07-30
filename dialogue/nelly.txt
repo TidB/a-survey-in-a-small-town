@@ -76,7 +76,7 @@ Uh, I go to school, then I do homework, play on the computer and then sleep. Had
 
 - What are your current worries?
 
-Mostly short-term things at the moment - upcoming geography exam that nobody thinks they'll pass, my applications getting accepted at the universities, 
+Mostly short-term things at the moment - upcoming geography exam that nobody thinks they'll pass, my applications getting accepted at the universities, having to stay here forever...
 It's alright though, that means I don't have any room to think about things way ahead in the future. That'll change soon enough anyway.
 
 - Does the product fit into this time?
@@ -99,34 +99,45 @@ You haven't changed at all! I probably switched my style about five times since 
 
 - How are you?
 
-I'm alright. 
+I'm alright, but my mother is getting [i]really[/i] worried now. I would ask you to maybe spare her the interviews, but Emily said you won't even spare the really weird questions.
+But hey, maybe in twenty years we'll be able to appeal to your humanity.
 
 |,nellyChoice1,Aren't you alarmed?,Have you changed?
 
 = nellyChoice1
 Should I be? I know the town and we are going down the drain, maybe it's because of you. You're not giving us a lot of confidence.
+Actually, probably it's because of you.
 =
-We all have grown a lot closer together, now that we're almost extinct.
+We all have grown a lot closer together, now that we're almost extinct. I've begun an accounting job and now that I handle numbers all day, your product idea and this survey make even less ense.
+Just make another dating app or something if you need the money, really.
 
 - What's your opinion on the Rift?
 
-My mom told me I shouldn't worry about it and so I didn't. I actually got curious about it, got closer, tried throwing rocks in there. 
+My mom told me I shouldn't worry about it and so I didn't. I actually got curious about it, got closer, tried throwing rocks in there.
+It's not really responding to anything, but it doesn't seem like a black hole either. Oh god, if some CERN conspiracy theorists came through here, they would make this into a huge story.
+Not that I'm complaining about it might becoming a huge story.
 
 - What were your thoughts when the survey first started?
 
-There weren't many and they probably weren't too relevant at the time, as you interviewed a literal toddler. My mother didn't speak highly of you, and I didn't understand at the time.
+There weren't many thoughts and they probably weren't too relevant at the time, as you interviewed a literal toddler. My mother didn't speak highly of you, and I didn't understand at the time.
+I don't remember much of Alison, but that Mary became... 'unvailable' - is that what you call it? urgh - so unexpectedly really bummed me out.
 
 |,nellyChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
 
 = nellyChoice2
-Wait, do you want us to leave? Why would you want that? We're here for your research, but you already managed to scare off two people...
+Wait, do you want us to leave? Why would you want that? We're here for your research, but you already managed to, no better word for it, dispose of two people...
+I think leaving now would be a mistake, there's too much to learn about you, St. Mariana and the Rift. And I won't leave before I get some answers.
 =
 My mother and Emily really want to leave with me, but I'm not sure I can. What happens when nobody is left anymore?
+They're scared as much as I am but we're a really strong group and we [i]will[/i] pull through.
+
+If we leave, the Rift might grow way bigger, and where would it stop? At the town borders? Would it eat the whole country? I'm not inclined to try that out yet.
 
 / RATE -5 0
 - Why didn't you tell friends and family about the product?
 
-Oh sure, Alex and Emily would love to hear more about it. Please, for your own sake, just keep it down. Tell your bosses what they wanna hear.
+Oh sure, Alex and Emily would love to hear more about it. Please, for your own sake, just keep it down. Tell your bosses what they wanna hear. Tell them we love the product and your whacky ideas.
+Stop being so obedient, please. Treat us as humans for once.
 
 - This concludes the third round of interviews. Thank you for your participation. We hope to meet you again soon.
 
@@ -201,7 +212,7 @@ Did you talk to Emily already? Please, please be more gentle. Alex moved away on
 - What's your opinion on the Rift?
 
 I'm... intrigued. I thought it might be a portal, but it seems to be just... nothing. I almost got caught by the edge when Alex left - it started expanding so quickly!
-You probably already saw that Alex left - again, please be careful with Emily.
+You probably already saw that she left - again, please be careful with Emily.
 
 |,nellyChoice6,Is this the end?,What are your current worries?
 
@@ -301,6 +312,15 @@ It has done nothing good for anyone! Even for you, do you think that taking lite
 =
 Oh it does, more than ever before. Just like you, it is concerned with everything else except the present.
 
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
+|,nellyLoop,Why aren't you dying?, Why aren't you dying?
 |,nellyLoop,Why aren't you dying?, Why aren't you dying?
 
 I won't.

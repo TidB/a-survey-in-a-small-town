@@ -25,20 +25,23 @@ func set_assignment():
 	$evaluation.visible = false
 	
 func set_evaluation():
-	var text = Global.current_config['eval'] + "\n\n"
+	var text = '\n' + Global.current_config['eval'] + "\n\n"
 	
-	if Global.productivity <= 40:
-		Global.reset_cooldown()
-		text += "Your productivity was a tad low, so in the next few choices you'll have to pick the option that's better (for us) ;)"
+	if Global.current_step + 1 < Global.timelines:
+		if Global.productivity <= 40:
+			Global.reset_cooldown()
+			text += "Your productivity was a tad low, so in the next few choices you'll have to pick the option that's better (for us) ;)"
+		else:
+			text += "Nice job keeping productivity high!! :D"
+		
+		text += "\n\n"
+		
+		if Global.average_happiness() <= 50:
+			text += "Aww, the interviewees were kinda sad :'("
+		else:
+			text += "Wow!! The interviewees were happy (enough)! Remember that this is not (y)our goal though ;)"
 	else:
-		text += "Nice job keeping productivity high!! :D"
-	
-	text += "\n\n"
-	
-	if Global.average_happiness() <= 50:
-		text += "Aww, the interviewees were kinda sad :'("
-	else:
-		text += "Wow!! The interviewees were happy (enough)! Remember that this is not (y)our goal though ;)"
+		$PostIt.visible = true
 	
 	$evaluation/RichTextLabel.text = text
 	$survey.visible = true

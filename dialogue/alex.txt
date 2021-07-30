@@ -52,9 +52,9 @@ Nelly told me you already visited her? WHY? Please, just can't you go away? What
 - How are you?
 
 = -25nellyVisitedBeforeAlex
-Alright. The mood is down a bit since Alison left - I hope you didn't leave a super negative impression with her. She didn't speak fondly of you.
-=
 Worse since you arrived. Do you have no empathy? Do you just read everything off your script?
+=
+Not good. The mood is down a bit since Alison left - I hope you didn't leave a super negative impression with her. She didn't speak fondly of you.
 
 - Have you read the information booklet?
 
@@ -91,13 +91,15 @@ And why do you look still so young?! That's really unnerving.
 - How are you?
 
 I've been anxious for all these years for you to arrive again, and now that you're here I'm almost relaxed.
+It reminds me of the first time I have asked for a raise at my job. I spent months agonizing over asking it, until I just did it.
 
 |,alexChoice1,Aren't you alarmed?,Have you changed?
 
 = alexChoice1
-What kind of question is this? So you [i]are[/i] aware of the damage you're doing?
+What kind of question is this? So you [i]are[/i] aware of the damage you're doing? I should talk to the town's administration to file a complaint for you, this is unacceptable.
+Of course I'm alarmed, how could you not be? Something is literally ripping this town apart!
 =
-I've grown weary.
+I've grown weary. I would have loved to talk more with Alison and Mary, but you took them away from me. Or at the very least, made the time shorter.
 
 / RATE -15 0
 - What's your opinion on the Rift?
@@ -115,16 +117,16 @@ But I was wrong and you came back.
 = alexChoice2
 Do you- Do you [i]want[/i] us to? I would, if I could. I thought I could protect Nelly from you, but I couldn't. And I don't want to risk tearing the Rift deeper. It seems to grow when fewer people are there.
 =
-I do. This town is devouring people. At least nobody is moving here, like they used to. It could all be so 
+I do. This town is devouring people. At least nobody is moving here, like they used to. It could all be so simple if you just didn't came back, it's almost making me angry.
 
 Nelly has become more and more interested in the Rift, and I think she almost wants to stay here to see how it festers on the abandoned buildings. I hope she will come with me. And Emily too.
+What will you do when everyone leaves? Will you still conduct your survey?
+You interviewed Nelly when she was a toddler lying in her bed and of course she wouldn't be able to give good answers. How did you even get to her without me noticing?
 
 / RATE -5 0
 - Why didn't you tell friends and family about the product?
-
-Are you again trying to shame me?
-- You have to answer the question.
-Absolutely no reason to tell anyone about it.
+Wait, how would you know that? You cannot know if I told anyone about it or not!
+Other surveys had referral codes given out so they could track who was referred by whom and where, but are you just... eavesdropping? One more reason to get away.
 
 - This concludes the third round of interviews. Thank you for your participation. We hope to meet you again soon.
 
@@ -134,27 +136,22 @@ Sure. I need to talk with Nelly.
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
-[i]This[/i] early again? Oh well, you managed to catch me another time after all.
-
-- You are contractually obliged to partake in the interviews.
-
-Then I'm consciously obliged to give you rubbish data.
+Oh no, already? You're speeding up [i]now[/i] of all times? You should've done that when people were still living here and you couldn't scare them away that quickly.
+Emily told me that you are using a time machine for this survey? This might be the most ridiculous thing I have ever heard, you are travelling through time to basically... ask bad questions?
 
 / FADE
 
 / RATE -5 5
 - How are you?
 
-Take a guess.
-
-- You have to answer the question. How are you?
-
 Worse than before, but at least it didn't happen as much as last time. The folks are still here, the Rift grew only a tiny amount.
+I've been planning to leave, but for some reason, the hardest part is getting Nelly on board with it. So oh well, you managed to catch me another time after all.
 
 |,alexChoice3,How much do you like this survey so far?,If you could only save three personal belongings from a catastrophe: which would you pick?
 
 = alexChoice3
-Is this a joke? This is the only survey I have ever been part of, and it has been the absolute worst.
+Is this a joke? This is the only survey I have ever been part of, and it has been the absolute worst. Have other surveys been like this? I guess not, because back then the town still existed and even grew!
+I would again ask you to be less aggressive with your approach, but it's already settled for you, and then it's also settled for me.
 =
 Oh, there isn't much I have here anyway. I like this rocking chair - I sound really old when I say that - and my current fountain pen. Oh, that sounds even older.
 The third one would probably be a deck of cards I have owned for decades by now. Oh, so many memories of evenings in our small group in the living room.
@@ -174,14 +171,17 @@ You're successful in making the most irrelevant product in history, so I can onl
 |,alexChoice5,You continue trying despite having no future. Why?,Who are you?
 
 = alexChoice5
-Oh, does it look like I'm trying? Does it look like I'm trying to hang on here? Just barely.
+Oh, does it look like I'm trying? Does it look like I'm trying to hang on here? Just barely. I will have a future, but not here.
+You know, you should ask Nelly all these rude questions! Maybe she will be more inclined to leave then. Emily wants to get away as well and we might be able to finally win her over.
 =
 I'm Alex, and soon I'm somewhere else.
 
 - Are you glad this interview is over?
 
-Not at all. I would have found it okay if you stuck with the longer pauses between interviews.
+Not at all. It might have been alright if you stuck with the longer pauses between interviews, but you are really throwing everyone off with these seemingly random pauses where we don't know if you will even come back.
+This could have all been all so easy...
 
 - This concludes the fourth round of interviews. Thank you for your participation. We hope to meet you again soon.
 
-Leave and never come back. I won't be here on your next round.
+Leave and never come back.
+I won't be here on your next round.

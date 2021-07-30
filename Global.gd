@@ -30,7 +30,7 @@ const TIME_CONFIG = [
 		'rift': [],
 		'wind': [0, 0, 0],
 		'asgmt': '\nRound 2: Timeline -25\n\nThis is technically only their second interview, so no choices yet :)\n\nFind the questions in attachment 2-1.',
-		'eval': 'One down, only four more to go ;)\n\nSeems like it won\t take much longer!!',
+		'eval': 'One down, only four more to go ;)\n\nSeems like it won\'t take much longer!!',
 		'happy': {
 			Person.Mary: 100,
 			Person.Alex: 90,
@@ -75,7 +75,7 @@ const TIME_CONFIG = [
 		'rift': ['Final', 'FinalBase'],
 		'wind': [20000, -20, 3.2],
 		'asgmt': '\nRound 6: Timeline +60\n\nWe almost did it!!\n\nGET.\nTHIS.\nDONE.\n;)\n\nFind the questions in attachment 6-1.',
-		'eval': '',
+		'eval': 'We did it!!!!!\n\nOne down, only fifteen more to go ;)\n\nPlease visit the recreational facilities to fully restore your mental state before starting the next survey!',
 		'happy': {},
 	}
 ]
@@ -120,7 +120,10 @@ func reset_cooldown():
 func average_happiness():
 	var sum = 0
 	for person in self.current_config["avail"]:
-		sum += happiness[person]
+		if person in happiness:
+			sum += happiness[person]
+		else:
+			sum += self.current_config["happy"][person]
 	return sum / len(self.current_config["avail"])
 
 func switch_to_interview(person):
@@ -139,8 +142,6 @@ func evaluation_finished():
 	if report_state == ReportState.Evaluation or report_state == ReportState.Survey:
 		if report_state == ReportState.Evaluation:
 			current_step += 1
-			print(current_step)
-			print(timelines)
 			if current_step >= timelines:
 				get_tree().change_scene("res://end.tscn")
 				return

@@ -5,7 +5,7 @@
 Aw crap, I hope Alex didn't lie to me. She said the surveys were over...
 I hope this won't take too long? Kinda busy with uni work right now...
 
-RATE -5 0
+/ RATE -5 0
 - Do not worry. The survey will only take a few hours or a few decades, depending on your point of view.
 
 Is that a joke? C'mon, let's get this over with.
@@ -51,27 +51,30 @@ Just not too soon please, if you do it during the exam period you'll get even sh
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
-Mariner? Oooh hey, it's you again. You... look exactly the same, that's cool.
+Mariner? Oooh hey, it's you again. You... look exactly the same, that's cool. Or weird.
+Normally, people who spend all their money on anti-aging stuff look far more sinister.
 
 / FADE
 
 - How are you?
 
-I'm fine. 
+I'm fine. Finally found an actual job suited for my Maths degree a few months back so that's quite fun.
+Can't believe I spent so many years living the cliché of a mathematician working as a cashier...
 
 - Have you read the information booklet?
 
 I think I flipped through it on a very boring day, yes. But in all honesty, what are you trying to do?
-There's no actual vision, not even something fancy marketing talk, 
+There's no actual vision, not even something fancy marketing talk, it's more focused on the survey, how it's super-long running and with a weird focus on these kinds of survey towns.
+Y'know, the kinds of towns that are so super average that they're used for surveys.
 
 - Have you changed?
 
-I'm glad I did - uni's done, work's good, I think I'm happier now. Made some new friends.
+I'm glad I did - uni's done, work's good, I think I'm happier now. Made some new friends, though the size of this town is unsurprisingly a bit limiting.
 
 - What is your typical day like?
 
 Your usual adult day, y'know. Sleeping, working, living, sleeping. The 'living' part usually being eating and going out.
-Oh, I sometimes tutor Nelly, but that's less frequent than a few years ago. 
+Oh, I sometimes tutor Nelly, but that's less frequent than a few years ago when she had her finals. I've never seen such an interested person!
 
 - What are your current worries?
 
@@ -81,7 +84,8 @@ On that point, please be careful with your interview - I heard that Alison moved
 
 - Does the product fit into this time?
 
-I think it looks better now, but more suited for someone half my age.
+I think it looks better now, but more suited for someone half my age. We actually had a discussion about that topic when everyone was invited over at Mary's place, and everyone thought it was made for something except their own demographic.
+You need to work on something more catchy with that. I have to take a glimpse at the booklet to even remember its name.
 
 - This concludes the second round of interviews. Thank you for your participation. We hope to meet you again soon.
 
@@ -98,26 +102,30 @@ You look like you haven't aged at all, is this an elaborate trick?
 - As such, St. Mariana spearheads the current efforts of adopting them as the next revolution in market research.
 
 Wait, you're telling me that a century-long survey only takes a couple hours from your point of view? This is your [i]average[/i] work day?
-Do you have [i]any[/i] idea what you're doing? How it affects us? Urgh, why do researches always treat everything like lab rats? Why do the ytreat lab rats like lab rats?
+Do you have [i]any[/i] idea what you're doing? How it affects us? Urgh, why do researchers always treat everything like lab rats? Why do they treat lab rats like lab rats?
 
 / FADE
 
 - How are you?
 
 Ah, I'm getting worried. Since Mary died a couple of years ago, a rift has started to open. Nelly talked about how it's caused by the town losing its people.
-I'm worried about her.
+I'm worried about her and her mom. Alex wants to get away and I maybe as well, but Nelly is holding everything together here.
 
 |,emilyChoice1,Aren't you alarmed?,Have you changed?
 
 = emilyChoice1
-What? Yes, I'm getting more alarmed by the day - and now you show up again? You're just making everything worse.
+What? Yes, I'm getting more alarmed by the day - and now you show up again and ask this useless? You're just making everything worse.
 =
-Not for the better.
+Not for the better. Getting angrier, lashing out more often.
+
+Do you even care about that product you're supposedly inquiring about? All we get are these weird questions from time-travelling - what the hell - weirdos.
 
 / RATE -15 0
 - What's your opinion on the Rift?
 
-There's no opinion to be had. Do you ask people for opinions on earthquakes? I'll stay here.
+There's no opinion to be had. Do you ask people for opinions on earthquakes? I'll stay here as long as it's necessary for Nelly, but you won't [i]believe[/i] how fast I'm gone after that.
+Speaking of her, she's been doing a lot of stuff around the Rift's edges. It almost seems like a child walking too close to the edge on a narrow mountain road, but she's super interested in it.
+It seems to me like she is researching it, but hasn't yet said anything.
 
 - What were your thoughts when the survey first started?
 
@@ -127,14 +135,17 @@ What I didn't anticipate was how destructive you are.
 |,emilyChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
 
 = emilyChoice2
-Oh please, you don't have to be condescending about it. 
+Oh please, you don't have to be condescending about it. I wonder what's the relevance of this question for your survey - some poor guy probably has through sift through all these responses and make sense of them.
+Can't wait for the results, based on the relatable demographic of people whose home is being destroyed by supernatural forces.
 =
 Maybe. I've looked at other options, while Nelly wants to stay here. And I don't want to lose her to this town.
+And it's not exactly easy to find a new nearby job as a mathematician, not the most asked-for position.
 
-/ RATE -5 0
+/ RATE -15 0
 - Why didn't you tell friends and family about the product?
 
-Are you surveying my family too? What the hell? Of course I didn't, not to a bunch of creeps.
+Are you surveying my family too? They don't even live here, what the hell? Of course I didn't, not to a bunch of creeps.
+I want to make it abundantly clear: Nobody wants to talk about this product. Not even you. You're just interested in something more damaging.
 
 - This concludes the third round of interviews. Thank you for your participation. We hope to meet you again soon.
 
@@ -144,12 +155,20 @@ Hm-hmm.
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
-Oh no, already? You're speeding up [i]now[/i] of all times? You should've done that when people were still living here and you couldn't scare them away that quickly.
+[i]This[/i] early again? The never-aging party people want another round?
+
+- You are contractually obliged to partake in the interviews.
+
+Then I'm consciously obliged to give you rubbish data.
 
 / FADE
 
 / RATE -5 5
 - How are you?
+
+Take a guess.
+
+- You have to answer the question. How are you?
 
 The Rift seems to have stabilized for now, I guess because nobody left in the meantime. The Wind is growing stronger now.
 Sometimes, I don't want to go buy groceries. It feels like I'm giving the Rift an opportunity to grow again.
@@ -160,17 +179,19 @@ Sometimes, I don't want to go buy groceries. It feels like I'm giving the Rift a
 That is a [i]bold[/i] question. Wow. Do you have 'Caused half the town to die or leave' as an option?
 - Please answer the question.
 I don't like it. Zero out of ten.
+Mary died much earlier than anyone including her doctors expected, and Alex thinks that she heard Alison talk very ominously and roughly about something that looks and feels like the Rift.
 =
 Is this another warning? Anyway, I'd pick my guitar, my diploma and... hm, I'm not sure. Despite all this, maybe a map of this town.
-When I moved in, they gave me some maps and documents and whatnot, and among those was a map of... better times, I assume. 
+When I moved in, they gave me some maps and documents and whatnot, and among those was a map of... better times, I assume.
+Nelly's been digging deep into those maps, she got into the topic much more since you last visited. Trying to find maps of other survey towns, trying to talk with their inhabitants.
 
 |,emilyChoice4,Why did you choose us?,What is the first thing you would buy after winning the lottery?
 
 = emilyChoice4
 Haha! Wow, it's getting better and better. Or worse and worse. Your pick. To answer your question, nobody chose you.
-You came here by yourselves, why don't you ask your boss?
+You came here by yourselves, why don't you ask your boss? All you do is read the text off your script, you could be easily replaced by a computer.
 =
-A house in another town.
+A house in another town. Maybe we're talking about a big lottery - in that case, a whole other town as a refuge for people who don't want to participate in shitty surveys anymore.
 
 / RATE -5 0
 - What would you sacrifice for the product?
@@ -179,14 +200,15 @@ A house in another town.
 Yeah, it [i]is[/i] getting worse and worse.
 =
 
-I don't think I'd sacrifice anything beyond catching it when it's thrown around for free at some point.
+I don't think I'd sacrifice anything beyond catching it when it's thrown around for free at some point. Nelly and I did some rough estimates of your possible sales numbers and there's no way you can get a profit on this as quickly as you want.
+You'd need like, 100 more years of selling it to make some actual money off it. Does this have something to do with your time machine thingy? I still don't think that's real, but otherwise it gets even more inane.
 
 |,emilyChoice5,You continue trying despite having no future. Why?,Who are you?
 
 = emilyChoice5
-What?
+What? No future? You're worrying me. I mean you personally, that you're able to read these questions off the script like it's nothing to you.
 =
-I'm... Emily? Sorry if you hoped for an introspective moody answer, I don't give those.
+I'm... Emily? Sorry if you hoped for an introspective moody answer, I don't give those. Maybe the wrong fit for this town, or the best one. Gotta keep the averageness of your numbers, you know.
 
 - Are you glad this interview is over?
 
