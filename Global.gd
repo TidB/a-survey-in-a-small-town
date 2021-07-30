@@ -148,6 +148,7 @@ func evaluation_finished():
 		report_state = ReportState.Assignment
 		get_tree().change_scene("res://assignment.tscn")
 	else:
+		Audio.play_sfx()
 		get_tree().change_scene("res://start.tscn")
 
 func get_bg_color():
