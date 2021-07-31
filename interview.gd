@@ -211,7 +211,7 @@ func choice(num):
 			happiness = clamp(happiness - 30, 0, 100)
 			Global.productivity = clamp(Global.productivity + 15, 0, 100)
 		else:
-			happiness = clamp(happiness + 20, 0, 100)
+			happiness = clamp(happiness + 25, 0, 100)
 			Global.productivity = clamp(Global.productivity - 30, 0, 100)
 		Global.decrease_cooldown()
 		

@@ -33,7 +33,7 @@ But it really doesn't seem interesting - sorry - so I'm not worrying about it.
 
 - What is your typical day like?
 
-Learning. At least the benefits in this town are good enough here so I don't have to wait tables, studying Maths is hard enough already.
+Learning. At least the benefits in this town are good enough so I don't have to wait tables, studying Maths is hard enough already.
 Speaking of benefits, I wonder why the government is still subsidizing this town when barely any surveys are made here. I guess it's just not been on their minds at all, and I like to keep it that way.
 
 - Does the product fit into this time?
@@ -80,12 +80,12 @@ Oh, I sometimes tutor Nelly, but that's less frequent than a few years ago when 
 
 I found some kind of routine with work and meeting friends, but I fear that this will continue forever. Obviously I'm happy, but the urge to wanna break out of it is always there.
 I'm still having so much fun with Nelly though. Apart from her, I'm glad that I'm not too attached to this town...
-On that point, please be careful with your interview - I heard that Alison moved away earlier than expected because of the first interview round?
+On that point, please be careful with your interviews - I heard that Alison moved away earlier than expected because of the first interview round?
 
 - Does the product fit into this time?
 
-I think it looks better now, but more suited for someone half my age. We actually had a discussion about that topic when everyone was invited over at Mary's place, and everyone thought it was made for something except their own demographic.
-You need to work on something more catchy with that. I have to take a glimpse at the booklet to even remember its name.
+I think it looks better now, but more suited for someone half my age. We actually had a discussion about that topic when everyone was invited over at Mary's place, and everyone thought it was made for everyone but their own demographic.
+You need to work on something more catchy with that. I have to check the booklet to even remember its name.
 
 - This concludes the second round of interviews. Thank you for your participation. We hope to meet you again soon.
 
@@ -124,12 +124,12 @@ Do you even care about that product you're supposedly inquiring about? All we ge
 - What's your opinion on the Rift?
 
 There's no opinion to be had. Do you ask people for opinions on earthquakes? I'll stay here as long as it's necessary for Nelly, but you won't [i]believe[/i] how fast I'm gone after that.
-Speaking of her, she's been doing a lot of stuff around the Rift's edges. It almost seems like a child walking too close to the edge on a narrow mountain road, but she's super interested in it.
+Speaking of her, she's been doing a lot of stuff around the Rift's edges. It almost looks like a child walking too close to the edge on a narrow mountain road, but she's super interested in it.
 It seems to me like she is researching it, but hasn't yet said anything.
 
 - What were your thoughts when the survey first started?
 
-I didn't think it was too bad - I thought the surveys were over and the benefits were good. When you started visiting, it wasn't too bad either.
+I didn't think it was too bad - I thought the actual surveys were over and the benefits were good. When you started visiting, it wasn't too bad either.
 What I didn't anticipate was how destructive you are.
 
 |,emilyChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
@@ -263,7 +263,10 @@ You're interested in not changing the world too much. To preserve the continuity
 
 - A slow wind is creeping across the land. Can you outrun it?
 
+/ RATE 0 -5
 Oh I can't, but I don't need to. But I'm happy to hear that you feel it as well. May you feel it forever.
+/ RATE 0 -5
+I've prepared a bunch of things with Nelly for the future - to prevent these things from happening somewhere else, in other towns.
 
 - This concludes the fifth round of interviews. Thank you for your participation. We hope to meet you again soon.
 

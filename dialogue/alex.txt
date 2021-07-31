@@ -37,6 +37,11 @@ You can see it right in front of you. Half of it is Nelly, one quarter of it is 
 
 Huh? It's on the modern side, but not that it's out of place. Probably something you would find in the background of a new home technology ad.
 
+- This concludes the first round of interviews. As mentioned in the booklet, we will conduct multiple surveys over the next decades with the same product.
+- Thank you for your participation. We hope to meet you again soon.
+
+Sure, see ya. Wait- decades?
+
 # -25
 
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
@@ -96,7 +101,7 @@ It reminds me of the first time I have asked for a raise at my job. I spent mont
 |,alexChoice1,Aren't you alarmed?,Have you changed?
 
 = alexChoice1
-What kind of question is this? So you [i]are[/i] aware of the damage you're doing? I should talk to the town's administration to file a complaint for you, this is unacceptable.
+What kind of question is this? So you [i]are[/i] aware of the damage you're doing? I should talk to the town's administration to file a complaint about you, this is unacceptable.
 Of course I'm alarmed, how could you not be? Something is literally ripping this town apart!
 =
 I've grown weary. I would have loved to talk more with Alison and Mary, but you took them away from me. Or at the very least, made the time shorter.
@@ -109,8 +114,8 @@ You can see that it's not good for your business either, right? Right?
 
 - What were your thoughts when the survey first started?
 
-I feared it, and I was right. With the surveys eventually stopping, I thought it was a good place to raise Nelly thanks to all the benefits we still get here, but without the drawbacks of having the constant surveys.
-But I was wrong and you came back.
+I feared it, and I was right. With the bulk of surveys eventually stopping, I thought it was a good place to raise Nelly thanks to all the benefits we still get here, but without the drawbacks of having the constant surveys.
+But I was wrong and you came back, and you were worse than anyone else.
 
 |,alexChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
 
@@ -137,7 +142,7 @@ Sure. I need to talk with Nelly.
 - Good day. We are from the [i]St. Mariana Market Research Division[/i] and are continuing our product survey.
 
 Oh no, already? You're speeding up [i]now[/i] of all times? You should've done that when people were still living here and you couldn't scare them away that quickly.
-Emily told me that you are using a time machine for this survey? This might be the most ridiculous thing I have ever heard, you are travelling through time to basically... ask bad questions?
+Emily told me that you are using a time machine for this survey? This might be the most ridiculous thing I have ever heard, you are travelling through time to... ask bad questions?
 
 / FADE
 

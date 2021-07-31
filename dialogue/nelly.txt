@@ -68,7 +68,7 @@ Yeah I checked it out a couple of times, but it's just boring. It's on the same 
 
 What do you mean, changed since when?
 - Since the last interview.
-What last interview? Mom said there was another one a couple years back, but I don't remember you interviewing me. Not that I missed it.
+What last interview? Mom said there was another one a couple years back, but I don't remember you interviewing me.
 
 - What is your typical day like?
 
@@ -81,7 +81,7 @@ It's alright though, that means I don't have any room to think about things way 
 
 - Does the product fit into this time?
 
-It looks good, but that's about it. Not sure how people would use it currently though. Mom might be a fan of it though, hahaha! Seems like something she'd bring back randomly after shopping.
+It looks good, but that's about it. Not sure how people would use it currently though. Mom might be a fan of it though, haha! Seems like something she'd bring back randomly after shopping.
 
 - This concludes the second round of interviews. Thank you for your participation. We hope to meet you again soon.
 This [i]actually[/i] was the second round? When was the first one?
@@ -99,7 +99,7 @@ You haven't changed at all! I probably switched my style about five times since 
 
 - How are you?
 
-I'm alright, but my mother is getting [i]really[/i] worried now. I would ask you to maybe spare her the interviews, but Emily said you won't even spare the really weird questions.
+I'm alright, but my mother is getting [i]really[/i] worried now. I would ask you to maybe spare her the interviews, but Emily said you won't even skip the really weird questions.
 But hey, maybe in twenty years we'll be able to appeal to your humanity.
 
 |,nellyChoice1,Aren't you alarmed?,Have you changed?
@@ -120,7 +120,7 @@ Not that I'm complaining about it might becoming a huge story.
 - What were your thoughts when the survey first started?
 
 There weren't many thoughts and they probably weren't too relevant at the time, as you interviewed a literal toddler. My mother didn't speak highly of you, and I didn't understand at the time.
-I don't remember much of Alison, but that Mary became... 'unvailable' - is that what you call it? urgh - so unexpectedly really bummed me out.
+I don't remember much of Alison, but that Mary became... 'unvailable' - is that what you call it? urgh - so unexpectedly really took its toll on me.
 
 |,nellyChoice2,Why haven't you moved somewhere else yet?,Do you plan to move somewhere else?
 
@@ -193,7 +193,7 @@ You know me.
 
 - Are you glad this interview is over?
 
-Only a bit. I enjoy learning from you as well, as you're slowly revealing who you are.
+Only a bit. I enjoy learning from you as well, as you're slowly revealing who you are. It's getting funny, almost like a treasure hunt.
 
 - This concludes the fourth round of interviews. Thank you for your participation. We hope to meet you again soon.
 
@@ -246,7 +246,9 @@ This is what you asked already, and what you know already. It's not innovative, 
 
 - A slow wind is creeping across the land. Can you outrun it?
 
+/ RATE 0 -5
 I would not want to. It feels like a massive, huge, soothing breeze. Cold, but not freezing. Sometimes, I go out in the night and feel it on my skin, like a kid playing in the rain.
+/ RATE 0 -5
 Emily does not like it. She does not like the Rift. She does not like when I'm out to feel them. But she stays with me here because of me, and I'm eternally thankful for that.
 
 - This concludes the fifth round of interviews. Thank you for your participation. We hope to meet you again soon.
@@ -295,7 +297,7 @@ Yes. I warned them, to be precise. It's already too late, I know. The product is
 = nellyChoice13
 I cried a lot. When Alison left, when Mary died, when my mother left, when Emily went away. As my mother always said, crying clears the soul - oh Alex, my soul is as clear as day now.
 =
-If you see it as part of the surveys then sure ha-ha!
+If you see it as part of the surveys then sure, haha!
 
 |,nellyChoice14,Have you thought about killing someone?,What is your typical day like?
 
@@ -327,7 +329,7 @@ I won't.
 
 - What were your thoughts when the survey started?
 
-As soon as you arrived here, everyone had the hunch that the Rift was inevitable. Alison told me how she shuddered when knocked.
+As soon as you arrived here, everyone had the hunch that the Rift was inevitable. Alison told me how she shuddered when you knocked.
 Alex has been terrified ever since. Emily went to a dark place and never came back. 
 
 / FADEPARTIAL
